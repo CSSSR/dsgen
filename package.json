@@ -1,0 +1,28 @@
+{
+  "name": "css-styleguide-generator",
+  "version": "0.1.0",
+  "description": "Create your own style guide based using CSS variables",
+  "main": "index.ts",
+  "scripts": {
+    "build": "ts-node index.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "css",
+    "styleguide",
+    "snippets"
+  ],
+  "author": "Nikita Golubov",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.5",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "colord": "^1.2.1"
+  }
+}

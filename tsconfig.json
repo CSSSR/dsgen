@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": [
+      "es2019"
+    ],
+    "strict": true
+  }
+}
