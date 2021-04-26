@@ -1,4 +1,4 @@
-import { VariablesGroup } from '../../../types'
+import { MediaQuery, VariablesGroup } from '../../../types'
 import { variablesFormatterCSS } from '../CSS'
 import { testVariablesCSS } from './testVariablesCSS'
 
@@ -52,7 +52,27 @@ describe('variablesFormatters', () => {
     },
   ]
 
+  const mediaQueries: MediaQuery[] = [
+    {
+      name: 'mobile',
+      snippet: '@mob',
+      value: '(max-width: 640px)',
+    },
+    {
+      name: 'tablet',
+      snippet: '@tab',
+      value: '(max-width: 1024px)',
+    },
+    {
+      name: 'desktop',
+      snippet: '@desk',
+      value: '(min-width: 1025px)',
+    },
+  ]
+
   it('formats CSS variables', () => {
-    expect(variablesFormatterCSS(variablesGroups)).toBe(testVariablesCSS)
+    expect(variablesFormatterCSS(variablesGroups, mediaQueries)).toBe(
+      testVariablesCSS
+    )
   })
 })

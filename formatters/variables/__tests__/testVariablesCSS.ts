@@ -1,4 +1,8 @@
 export const testVariablesCSS = `
+@custom-media --mobile (max-width: 640px);
+@custom-media --tablet (max-width: 1024px);
+@custom-media --desktop (min-width: 1025px);
+
 :root {
   /* Text colors */
   --color-text-primary: #111;

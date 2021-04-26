@@ -5,7 +5,7 @@ type VSCodeSnippet = [
   {
     scope: string
     prefix: string
-    body: string
+    body: string | string[]
   }
 ]
 
@@ -22,6 +22,9 @@ const formatSnippet = (snippet: Snippet): VSCodeSnippet => [
   {
     scope: 'css,postcss',
     prefix: snippet.name,
-    body: `${snippet.property}: var(--${snippet.variable || '$0'});`,
+    body:
+      'mediaQueryVariable' in snippet
+        ? [`@media (--${snippet.mediaQueryVariable}) {`, '\t$0', '}']
+        : `${snippet.property}: var(--${snippet.variable || '$0'});`,
   },
 ]

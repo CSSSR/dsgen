@@ -15,6 +15,7 @@ export type Config = {
       value: string
     }>
   }>
+  mediaQueries?: MediaQuery[]
 }
 
 export type VariablesGroup = {
@@ -27,13 +28,27 @@ export type Variable = {
   value: string
 }
 
-export type VariablesFormatter = (variablesGroups: VariablesGroup[]) => string
-
-export type Snippet = {
+export type MediaQuery = {
   name: string
-  property: string
-  variable: string | null
+  snippet: string
+  value: string
 }
+
+export type VariablesFormatter = (
+  variablesGroups: VariablesGroup[],
+  mediaQueries: MediaQuery[]
+) => string
+
+export type Snippet =
+  | {
+      name: string
+      property: string
+      variable: string | null
+    }
+  | {
+      name: string
+      mediaQueryVariable: string
+    }
 
 export type SnippetsFormatter = (name: string, snippets: Snippet[]) => string
 

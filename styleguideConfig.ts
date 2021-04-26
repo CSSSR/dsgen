@@ -16,5 +16,5 @@ import { Config } from './types'
 
 export const styleguideConfig: Config = {
   name: 'Styleguide',
-  properties: [],
+  variablesGroups: [],
 }

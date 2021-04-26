@@ -1,9 +1,18 @@
-import { Variable, VariablesFormatter, VariablesGroup } from '../../types'
+import {
+  MediaQuery,
+  Variable,
+  VariablesFormatter,
+  VariablesGroup,
+} from '../../types'
 
-export const variablesFormatterCSS: VariablesFormatter = (variablesGroups) => {
+export const variablesFormatterCSS: VariablesFormatter = (
+  variablesGroups,
+  mediaQueries
+) => {
+  const mediaQueriesText = formatMediaQueries(mediaQueries)
   const groupsText = variablesGroups.map(formatGroup).join('\n\n')
 
-  return formatRoot(groupsText)
+  return [mediaQueriesText, formatRoot(groupsText)].join('\n\n')
 }
 
 const formatRoot = (children: string): string =>
@@ -21,3 +30,9 @@ const formatGroup = (group: VariablesGroup): string =>
 
 const formatVariable = ({ name, value }: Variable): string =>
   `--${name}: ${value};`
+
+const formatMediaQueries = (mediaQueries: MediaQuery[]): string => {
+  return mediaQueries
+    .map(({ name, value }) => `@custom-media --${name} ${value};`)
+    .join('\n')
+}

@@ -7,6 +7,7 @@ import {
   SnippetsFormatter,
   SnippetsTarget,
   Variable,
+  VariablesFormatter,
   VariablesGroup,
 } from './types'
 
@@ -67,11 +68,11 @@ const getSnippetText = (
 const getVariableName = (variable: Variable, group: string) =>
   `${group}-${variable.name}`
 
+const styleFormatters: Record<'CSS', VariablesFormatter> = {
+  CSS: variablesFormatterCSS,
+}
+
 const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
   IntelliJ: snippetsFormatterIntelliJ,
   VSCode: snippetsFormatterVSCode,
-}
-
-const variablesFormatters = {
-  CSS: variablesFormatterCSS,
 }

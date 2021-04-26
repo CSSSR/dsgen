@@ -16,15 +16,28 @@ ${children}
 </templateSet>
 `.trim()
 
-const formatSnippet = ({ name, property, variable }: Snippet): string =>
-  [
-    `<template name="${name}" value="${property}: var(--${
-      variable || '$END$'
-    });" description="" toReformat="false" toShortenFQNames="true">`,
+const formatSnippet = (snippet: Snippet): string => {
+  const value =
+    'mediaQueryVariable' in snippet
+      ? `@media (--${snippet.mediaQueryVariable}) {&#10;$END$&#10;}`
+      : `${snippet.property}: var(--${snippet.variable || '$END$'});`
+
+  const contextStrings =
+    'mediaQueryVariable' in snippet
+      ? [
+          '<option name="CSS" value="true" />',
+          '<option name="CSS_DECLARATION_BLOCK" value="false" />',
+          '<option name="CSS_PROPERTY_VALUE" value="false" />',
+        ]
+      : ['<option name="CSS_DECLARATION_BLOCK" value="true" />']
+
+  return [
+    `<template name="${snippet.name}" value="${value}" description="" toReformat="true" toShortenFQNames="true">`,
     '  <context>',
-    '    <option name="CSS_DECLARATION_BLOCK" value="true" />',
+    ...contextStrings.map((str) => `    ${str}`),
     '  </context>',
     '</template>',
   ]
     .map((str) => `  ${str}`)
     .join('\n')
+}

@@ -7,6 +7,14 @@ import { Snippet } from '../../../types'
 describe('snippetsFormatters', () => {
   const snippets: Snippet[] = [
     {
+      name: '@mob',
+      mediaQueryVariable: 'mobile',
+    },
+    {
+      name: '@tab',
+      mediaQueryVariable: 'tablet',
+    },
+    {
       name: 'colpr',
       property: 'color',
       variable: 'color-primary',
