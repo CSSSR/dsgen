@@ -10,7 +10,7 @@
   "author": "Nikita Golubov",
   "license": "MIT",
   "scripts": {
-    "build": "ts-node main.ts",
+    "build": "ts-node generator/index.ts",
     "type-check": "tsc --pretty --noEmit",
     "unit": "jest",
     "test": "yarn type-check && yarn unit"

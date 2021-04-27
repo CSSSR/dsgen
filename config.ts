@@ -1,4 +1,4 @@
-import { Config } from './types'
+import { Config } from './generator/types'
 
 export const config: Config = {
   name: 'Design System',

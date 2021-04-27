@@ -1,11 +1,11 @@
 import * as fs from 'fs'
-import { config } from './config'
+import { config } from '../config'
 import {
   getSnippetsList,
   getVariablesGroups,
   snippetsFormatters,
   styleFormatters,
-} from './'
+} from './helpers'
 import { SnippetsTarget } from './types'
 
 const main = async () => {
