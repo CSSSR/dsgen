@@ -1,4 +1,4 @@
-import { getSnippetsList, getVariablesGroups } from '../'
+import { getSnippetsList, getVariablesGroups } from '../helpers'
 import { Config } from '../types'
 
 describe('styleguide generator', () => {
