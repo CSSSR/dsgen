@@ -1,22 +1,21 @@
+import { PropertiesHyphen } from 'csstype'
+
 export type Config = {
   name: string
   separator?: string
   variablesGroups: Array<{
     name: string
     description?: string
-    properties: Array<{
-      property: string
-      prefix: string
-      withWildcard?: true
-    }>
-    variables: Array<{
-      name: string
-      suffix?: string
-      value: string
-    }>
+    withWildcard?: true
+    properties: Record<PropertySnippet, keyof PropertiesHyphen>
+    variables: Record<VariableName, VariableValue>
   }>
   mediaQueries?: MediaQuery[]
 }
+
+type PropertySnippet = string
+type VariableName = string
+type VariableValue = string
 
 export type VariablesGroup = {
   description?: string

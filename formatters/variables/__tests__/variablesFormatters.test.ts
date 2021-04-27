@@ -1,6 +1,6 @@
 import { MediaQuery, VariablesGroup } from '../../../types'
 import { variablesFormatterCSS } from '../CSS'
-import { testVariablesCSS } from './testVariablesCSS'
+import { testOnlyVariablesCSS, testVariablesCSS } from './testVariablesCSS'
 
 describe('variablesFormatters', () => {
   const variablesGroups: VariablesGroup[] = [
@@ -73,6 +73,12 @@ describe('variablesFormatters', () => {
   it('formats CSS variables', () => {
     expect(variablesFormatterCSS(variablesGroups, mediaQueries)).toBe(
       testVariablesCSS
+    )
+  })
+
+  it('formats CSS variables without media queries', () => {
+    expect(variablesFormatterCSS(variablesGroups, [])).toBe(
+      testOnlyVariablesCSS
     )
   })
 })

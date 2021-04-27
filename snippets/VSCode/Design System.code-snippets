@@ -1,0 +1,574 @@
+{
+  "@mob": {
+    "scope": "css,postcss",
+    "prefix": "@mob",
+    "body": [
+      "@media (--mobile) {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "@tab": {
+    "scope": "css,postcss",
+    "prefix": "@tab",
+    "body": [
+      "@media (--tablet) {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "@desk": {
+    "scope": "css,postcss",
+    "prefix": "@desk",
+    "body": [
+      "@media (--desktop) {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "color-primary": {
+    "scope": "css,postcss",
+    "prefix": "color-primary",
+    "body": "color: var(--color-primary);"
+  },
+  "color-secondary": {
+    "scope": "css,postcss",
+    "prefix": "color-secondary",
+    "body": "color: var(--color-secondary);"
+  },
+  "color-link": {
+    "scope": "css,postcss",
+    "prefix": "color-link",
+    "body": "color: var(--color-link);"
+  },
+  "color-link-hover": {
+    "scope": "css,postcss",
+    "prefix": "color-link-hover",
+    "body": "color: var(--color-link-hover);"
+  },
+  "color-success": {
+    "scope": "css,postcss",
+    "prefix": "color-success",
+    "body": "color: var(--color-success);"
+  },
+  "color-warning": {
+    "scope": "css,postcss",
+    "prefix": "color-warning",
+    "body": "color: var(--color-warning);"
+  },
+  "color-error": {
+    "scope": "css,postcss",
+    "prefix": "color-error",
+    "body": "color: var(--color-error);"
+  },
+  "color-var": {
+    "scope": "css,postcss",
+    "prefix": "color-var",
+    "body": "color: var(--$0);"
+  },
+  "bgc-primary": {
+    "scope": "css,postcss",
+    "prefix": "bgc-primary",
+    "body": "background-color: var(--color-bg-primary);"
+  },
+  "bgc-secondary": {
+    "scope": "css,postcss",
+    "prefix": "bgc-secondary",
+    "body": "background-color: var(--color-bg-secondary);"
+  },
+  "bgc-success": {
+    "scope": "css,postcss",
+    "prefix": "bgc-success",
+    "body": "background-color: var(--color-bg-success);"
+  },
+  "bgc-warning": {
+    "scope": "css,postcss",
+    "prefix": "bgc-warning",
+    "body": "background-color: var(--color-bg-warning);"
+  },
+  "bgc-error": {
+    "scope": "css,postcss",
+    "prefix": "bgc-error",
+    "body": "background-color: var(--color-bg-error);"
+  },
+  "bgc-var": {
+    "scope": "css,postcss",
+    "prefix": "bgc-var",
+    "body": "background-color: var(--$0);"
+  },
+  "fill-primary": {
+    "scope": "css,postcss",
+    "prefix": "fill-primary",
+    "body": "fill: var(--color-bg-primary);"
+  },
+  "fill-secondary": {
+    "scope": "css,postcss",
+    "prefix": "fill-secondary",
+    "body": "fill: var(--color-bg-secondary);"
+  },
+  "fill-success": {
+    "scope": "css,postcss",
+    "prefix": "fill-success",
+    "body": "fill: var(--color-bg-success);"
+  },
+  "fill-warning": {
+    "scope": "css,postcss",
+    "prefix": "fill-warning",
+    "body": "fill: var(--color-bg-warning);"
+  },
+  "fill-error": {
+    "scope": "css,postcss",
+    "prefix": "fill-error",
+    "body": "fill: var(--color-bg-error);"
+  },
+  "fill-var": {
+    "scope": "css,postcss",
+    "prefix": "fill-var",
+    "body": "fill: var(--$0);"
+  },
+  "stroke-primary": {
+    "scope": "css,postcss",
+    "prefix": "stroke-primary",
+    "body": "stroke: var(--color-bg-primary);"
+  },
+  "stroke-secondary": {
+    "scope": "css,postcss",
+    "prefix": "stroke-secondary",
+    "body": "stroke: var(--color-bg-secondary);"
+  },
+  "stroke-success": {
+    "scope": "css,postcss",
+    "prefix": "stroke-success",
+    "body": "stroke: var(--color-bg-success);"
+  },
+  "stroke-warning": {
+    "scope": "css,postcss",
+    "prefix": "stroke-warning",
+    "body": "stroke: var(--color-bg-warning);"
+  },
+  "stroke-error": {
+    "scope": "css,postcss",
+    "prefix": "stroke-error",
+    "body": "stroke: var(--color-bg-error);"
+  },
+  "stroke-var": {
+    "scope": "css,postcss",
+    "prefix": "stroke-var",
+    "body": "stroke: var(--$0);"
+  },
+  "fz-xs": {
+    "scope": "css,postcss",
+    "prefix": "fz-xs",
+    "body": "font-size: var(--font-size-xs);"
+  },
+  "fz-s": {
+    "scope": "css,postcss",
+    "prefix": "fz-s",
+    "body": "font-size: var(--font-size-s);"
+  },
+  "fz-m": {
+    "scope": "css,postcss",
+    "prefix": "fz-m",
+    "body": "font-size: var(--font-size-m);"
+  },
+  "fz-l": {
+    "scope": "css,postcss",
+    "prefix": "fz-l",
+    "body": "font-size: var(--font-size-l);"
+  },
+  "fz-xl": {
+    "scope": "css,postcss",
+    "prefix": "fz-xl",
+    "body": "font-size: var(--font-size-xl);"
+  },
+  "lh-narrow": {
+    "scope": "css,postcss",
+    "prefix": "lh-narrow",
+    "body": "line-height: var(--line-height-narrow);"
+  },
+  "lh-normal": {
+    "scope": "css,postcss",
+    "prefix": "lh-normal",
+    "body": "line-height: var(--line-height-normal);"
+  },
+  "lh-wide": {
+    "scope": "css,postcss",
+    "prefix": "lh-wide",
+    "body": "line-height: var(--line-height-wide);"
+  },
+  "p-xs": {
+    "scope": "css,postcss",
+    "prefix": "p-xs",
+    "body": "padding: var(--spacing-xs);"
+  },
+  "p-s": {
+    "scope": "css,postcss",
+    "prefix": "p-s",
+    "body": "padding: var(--spacing-s);"
+  },
+  "p-m": {
+    "scope": "css,postcss",
+    "prefix": "p-m",
+    "body": "padding: var(--spacing-m);"
+  },
+  "p-l": {
+    "scope": "css,postcss",
+    "prefix": "p-l",
+    "body": "padding: var(--spacing-l);"
+  },
+  "p-xl": {
+    "scope": "css,postcss",
+    "prefix": "p-xl",
+    "body": "padding: var(--spacing-xl);"
+  },
+  "pt-xs": {
+    "scope": "css,postcss",
+    "prefix": "pt-xs",
+    "body": "padding-top: var(--spacing-xs);"
+  },
+  "pt-s": {
+    "scope": "css,postcss",
+    "prefix": "pt-s",
+    "body": "padding-top: var(--spacing-s);"
+  },
+  "pt-m": {
+    "scope": "css,postcss",
+    "prefix": "pt-m",
+    "body": "padding-top: var(--spacing-m);"
+  },
+  "pt-l": {
+    "scope": "css,postcss",
+    "prefix": "pt-l",
+    "body": "padding-top: var(--spacing-l);"
+  },
+  "pt-xl": {
+    "scope": "css,postcss",
+    "prefix": "pt-xl",
+    "body": "padding-top: var(--spacing-xl);"
+  },
+  "pr-xs": {
+    "scope": "css,postcss",
+    "prefix": "pr-xs",
+    "body": "padding-right: var(--spacing-xs);"
+  },
+  "pr-s": {
+    "scope": "css,postcss",
+    "prefix": "pr-s",
+    "body": "padding-right: var(--spacing-s);"
+  },
+  "pr-m": {
+    "scope": "css,postcss",
+    "prefix": "pr-m",
+    "body": "padding-right: var(--spacing-m);"
+  },
+  "pr-l": {
+    "scope": "css,postcss",
+    "prefix": "pr-l",
+    "body": "padding-right: var(--spacing-l);"
+  },
+  "pr-xl": {
+    "scope": "css,postcss",
+    "prefix": "pr-xl",
+    "body": "padding-right: var(--spacing-xl);"
+  },
+  "pb-xs": {
+    "scope": "css,postcss",
+    "prefix": "pb-xs",
+    "body": "padding-bottom: var(--spacing-xs);"
+  },
+  "pb-s": {
+    "scope": "css,postcss",
+    "prefix": "pb-s",
+    "body": "padding-bottom: var(--spacing-s);"
+  },
+  "pb-m": {
+    "scope": "css,postcss",
+    "prefix": "pb-m",
+    "body": "padding-bottom: var(--spacing-m);"
+  },
+  "pb-l": {
+    "scope": "css,postcss",
+    "prefix": "pb-l",
+    "body": "padding-bottom: var(--spacing-l);"
+  },
+  "pb-xl": {
+    "scope": "css,postcss",
+    "prefix": "pb-xl",
+    "body": "padding-bottom: var(--spacing-xl);"
+  },
+  "pl-xs": {
+    "scope": "css,postcss",
+    "prefix": "pl-xs",
+    "body": "padding-left: var(--spacing-xs);"
+  },
+  "pl-s": {
+    "scope": "css,postcss",
+    "prefix": "pl-s",
+    "body": "padding-left: var(--spacing-s);"
+  },
+  "pl-m": {
+    "scope": "css,postcss",
+    "prefix": "pl-m",
+    "body": "padding-left: var(--spacing-m);"
+  },
+  "pl-l": {
+    "scope": "css,postcss",
+    "prefix": "pl-l",
+    "body": "padding-left: var(--spacing-l);"
+  },
+  "pl-xl": {
+    "scope": "css,postcss",
+    "prefix": "pl-xl",
+    "body": "padding-left: var(--spacing-xl);"
+  },
+  "m-xs": {
+    "scope": "css,postcss",
+    "prefix": "m-xs",
+    "body": "margin: var(--spacing-xs);"
+  },
+  "m-s": {
+    "scope": "css,postcss",
+    "prefix": "m-s",
+    "body": "margin: var(--spacing-s);"
+  },
+  "m-m": {
+    "scope": "css,postcss",
+    "prefix": "m-m",
+    "body": "margin: var(--spacing-m);"
+  },
+  "m-l": {
+    "scope": "css,postcss",
+    "prefix": "m-l",
+    "body": "margin: var(--spacing-l);"
+  },
+  "m-xl": {
+    "scope": "css,postcss",
+    "prefix": "m-xl",
+    "body": "margin: var(--spacing-xl);"
+  },
+  "mt-xs": {
+    "scope": "css,postcss",
+    "prefix": "mt-xs",
+    "body": "margin-top: var(--spacing-xs);"
+  },
+  "mt-s": {
+    "scope": "css,postcss",
+    "prefix": "mt-s",
+    "body": "margin-top: var(--spacing-s);"
+  },
+  "mt-m": {
+    "scope": "css,postcss",
+    "prefix": "mt-m",
+    "body": "margin-top: var(--spacing-m);"
+  },
+  "mt-l": {
+    "scope": "css,postcss",
+    "prefix": "mt-l",
+    "body": "margin-top: var(--spacing-l);"
+  },
+  "mt-xl": {
+    "scope": "css,postcss",
+    "prefix": "mt-xl",
+    "body": "margin-top: var(--spacing-xl);"
+  },
+  "mr-xs": {
+    "scope": "css,postcss",
+    "prefix": "mr-xs",
+    "body": "margin-right: var(--spacing-xs);"
+  },
+  "mr-s": {
+    "scope": "css,postcss",
+    "prefix": "mr-s",
+    "body": "margin-right: var(--spacing-s);"
+  },
+  "mr-m": {
+    "scope": "css,postcss",
+    "prefix": "mr-m",
+    "body": "margin-right: var(--spacing-m);"
+  },
+  "mr-l": {
+    "scope": "css,postcss",
+    "prefix": "mr-l",
+    "body": "margin-right: var(--spacing-l);"
+  },
+  "mr-xl": {
+    "scope": "css,postcss",
+    "prefix": "mr-xl",
+    "body": "margin-right: var(--spacing-xl);"
+  },
+  "mb-xs": {
+    "scope": "css,postcss",
+    "prefix": "mb-xs",
+    "body": "margin-bottom: var(--spacing-xs);"
+  },
+  "mb-s": {
+    "scope": "css,postcss",
+    "prefix": "mb-s",
+    "body": "margin-bottom: var(--spacing-s);"
+  },
+  "mb-m": {
+    "scope": "css,postcss",
+    "prefix": "mb-m",
+    "body": "margin-bottom: var(--spacing-m);"
+  },
+  "mb-l": {
+    "scope": "css,postcss",
+    "prefix": "mb-l",
+    "body": "margin-bottom: var(--spacing-l);"
+  },
+  "mb-xl": {
+    "scope": "css,postcss",
+    "prefix": "mb-xl",
+    "body": "margin-bottom: var(--spacing-xl);"
+  },
+  "ml-xs": {
+    "scope": "css,postcss",
+    "prefix": "ml-xs",
+    "body": "margin-left: var(--spacing-xs);"
+  },
+  "ml-s": {
+    "scope": "css,postcss",
+    "prefix": "ml-s",
+    "body": "margin-left: var(--spacing-s);"
+  },
+  "ml-m": {
+    "scope": "css,postcss",
+    "prefix": "ml-m",
+    "body": "margin-left: var(--spacing-m);"
+  },
+  "ml-l": {
+    "scope": "css,postcss",
+    "prefix": "ml-l",
+    "body": "margin-left: var(--spacing-l);"
+  },
+  "ml-xl": {
+    "scope": "css,postcss",
+    "prefix": "ml-xl",
+    "body": "margin-left: var(--spacing-xl);"
+  },
+  "t-xs": {
+    "scope": "css,postcss",
+    "prefix": "t-xs",
+    "body": "top: var(--spacing-xs);"
+  },
+  "t-s": {
+    "scope": "css,postcss",
+    "prefix": "t-s",
+    "body": "top: var(--spacing-s);"
+  },
+  "t-m": {
+    "scope": "css,postcss",
+    "prefix": "t-m",
+    "body": "top: var(--spacing-m);"
+  },
+  "t-l": {
+    "scope": "css,postcss",
+    "prefix": "t-l",
+    "body": "top: var(--spacing-l);"
+  },
+  "t-xl": {
+    "scope": "css,postcss",
+    "prefix": "t-xl",
+    "body": "top: var(--spacing-xl);"
+  },
+  "r-xs": {
+    "scope": "css,postcss",
+    "prefix": "r-xs",
+    "body": "right: var(--spacing-xs);"
+  },
+  "r-s": {
+    "scope": "css,postcss",
+    "prefix": "r-s",
+    "body": "right: var(--spacing-s);"
+  },
+  "r-m": {
+    "scope": "css,postcss",
+    "prefix": "r-m",
+    "body": "right: var(--spacing-m);"
+  },
+  "r-l": {
+    "scope": "css,postcss",
+    "prefix": "r-l",
+    "body": "right: var(--spacing-l);"
+  },
+  "r-xl": {
+    "scope": "css,postcss",
+    "prefix": "r-xl",
+    "body": "right: var(--spacing-xl);"
+  },
+  "b-xs": {
+    "scope": "css,postcss",
+    "prefix": "b-xs",
+    "body": "bottom: var(--spacing-xs);"
+  },
+  "b-s": {
+    "scope": "css,postcss",
+    "prefix": "b-s",
+    "body": "bottom: var(--spacing-s);"
+  },
+  "b-m": {
+    "scope": "css,postcss",
+    "prefix": "b-m",
+    "body": "bottom: var(--spacing-m);"
+  },
+  "b-l": {
+    "scope": "css,postcss",
+    "prefix": "b-l",
+    "body": "bottom: var(--spacing-l);"
+  },
+  "b-xl": {
+    "scope": "css,postcss",
+    "prefix": "b-xl",
+    "body": "bottom: var(--spacing-xl);"
+  },
+  "l-xs": {
+    "scope": "css,postcss",
+    "prefix": "l-xs",
+    "body": "left: var(--spacing-xs);"
+  },
+  "l-s": {
+    "scope": "css,postcss",
+    "prefix": "l-s",
+    "body": "left: var(--spacing-s);"
+  },
+  "l-m": {
+    "scope": "css,postcss",
+    "prefix": "l-m",
+    "body": "left: var(--spacing-m);"
+  },
+  "l-l": {
+    "scope": "css,postcss",
+    "prefix": "l-l",
+    "body": "left: var(--spacing-l);"
+  },
+  "l-xl": {
+    "scope": "css,postcss",
+    "prefix": "l-xl",
+    "body": "left: var(--spacing-xl);"
+  },
+  "gap-xs": {
+    "scope": "css,postcss",
+    "prefix": "gap-xs",
+    "body": "grid-gap: var(--spacing-xs);"
+  },
+  "gap-s": {
+    "scope": "css,postcss",
+    "prefix": "gap-s",
+    "body": "grid-gap: var(--spacing-s);"
+  },
+  "gap-m": {
+    "scope": "css,postcss",
+    "prefix": "gap-m",
+    "body": "grid-gap: var(--spacing-m);"
+  },
+  "gap-l": {
+    "scope": "css,postcss",
+    "prefix": "gap-l",
+    "body": "grid-gap: var(--spacing-l);"
+  },
+  "gap-xl": {
+    "scope": "css,postcss",
+    "prefix": "gap-xl",
+    "body": "grid-gap: var(--spacing-xl);"
+  }
+}

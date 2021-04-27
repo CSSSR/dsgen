@@ -12,7 +12,7 @@ export const variablesFormatterCSS: VariablesFormatter = (
   const mediaQueriesText = formatMediaQueries(mediaQueries)
   const groupsText = variablesGroups.map(formatGroup).join('\n\n')
 
-  return [mediaQueriesText, formatRoot(groupsText)].join('\n\n')
+  return [mediaQueriesText, formatRoot(groupsText)].filter(Boolean).join('\n\n')
 }
 
 const formatRoot = (children: string): string =>

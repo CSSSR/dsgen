@@ -6,57 +6,66 @@ import {
   Snippet,
   SnippetsFormatter,
   SnippetsTarget,
-  Variable,
   VariablesFormatter,
   VariablesGroup,
 } from './types'
 
 const DEFAULT_SEPARATOR = ''
-const DEFAULT_WILDCARD_SUFFIX = 'v'
+const DEFAULT_WILDCARD_SUFFIX = 'var'
 
 export const getVariablesGroups = (config: Config): VariablesGroup[] => {
   return config.variablesGroups.map((group) => ({
     description: group.description,
-    variables: group.variables.map((configVar) => ({
-      name: getVariableName(configVar, group.name),
-      value: configVar.value,
+    variables: Object.entries(group.variables).map(([varName, varValue]) => ({
+      name: getVariableName(varName, group.name),
+      value: varValue,
     })),
   }))
 }
 
 export const getSnippetsList = (config: Config): Snippet[] => {
-  return config.variablesGroups.flatMap((group) => {
-    return group.properties.flatMap(({ property, prefix, withWildcard }) =>
-      group.variables
-        .map(
-          (variable): Snippet => {
-            const snippetText = getSnippetText(
-              prefix,
-              variable.suffix || variable.name,
-              config.separator
-            )
-            return {
-              name: snippetText,
-              property,
-              variable: getVariableName(variable, group.name),
-            }
-          }
-        )
-        .concat(
-          withWildcard
-            ? {
-                name: getSnippetText(
-                  prefix,
-                  DEFAULT_WILDCARD_SUFFIX,
-                  config.separator
-                ),
+  const mediaQuerySnippets: Snippet[] =
+    config.mediaQueries?.map((mediaQuery) => ({
+      name: mediaQuery.snippet,
+      mediaQueryVariable: mediaQuery.name,
+    })) || []
+
+  const variablesSnippets: Snippet[] = config.variablesGroups.flatMap(
+    (group) => {
+      return Object.entries(group.properties).flatMap(([prefix, property]) =>
+        Object.entries(group.variables)
+          .map(
+            ([varName]): Snippet => {
+              const snippetText = getSnippetText(
+                prefix,
+                varName,
+                config.separator
+              )
+              return {
+                name: snippetText,
                 property,
-                variable: null,
+                variable: getVariableName(varName, group.name),
               }
-            : []
-        )
-    )
-  })
+            }
+          )
+          .concat(
+            group.withWildcard
+              ? {
+                  name: getSnippetText(
+                    prefix,
+                    DEFAULT_WILDCARD_SUFFIX,
+                    config.separator
+                  ),
+                  property,
+                  variable: null,
+                }
+              : []
+          )
+      )
+    }
+  )
+
+  return [...mediaQuerySnippets, ...variablesSnippets]
 }
 
 const getSnippetText = (
@@ -65,14 +74,14 @@ const getSnippetText = (
   separator: string = DEFAULT_SEPARATOR
 ): string => [prefix, suffix].join(separator)
 
-const getVariableName = (variable: Variable, group: string) =>
-  `${group}-${variable.name}`
+const getVariableName = (variableName: string, group: string) =>
+  `${group}-${variableName}`
 
-const styleFormatters: Record<'CSS', VariablesFormatter> = {
+export const styleFormatters: Record<'CSS', VariablesFormatter> = {
   CSS: variablesFormatterCSS,
 }
 
-const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
+export const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
   IntelliJ: snippetsFormatterIntelliJ,
   VSCode: snippetsFormatterVSCode,
 }

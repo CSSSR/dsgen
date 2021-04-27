@@ -8,25 +8,14 @@ describe('styleguide generator', () => {
       variablesGroups: [
         {
           name: 'color',
-          properties: [
-            {
-              property: 'color',
-              prefix: 'col',
-              withWildcard: true,
-            },
-          ],
-          variables: [
-            {
-              name: 'primary',
-              value: '#111',
-              suffix: 'pr',
-            },
-            {
-              name: 'secondary',
-              value: '#222',
-              suffix: 'sec',
-            },
-          ],
+          withWildcard: true,
+          properties: {
+            col: 'color',
+          },
+          variables: {
+            primary: '#111',
+            secondary: '#222',
+          },
         },
       ],
     }
@@ -54,12 +43,12 @@ describe('styleguide generator', () => {
       const result = getSnippetsList(colorConfig)
       const expected: typeof result = [
         {
-          name: 'colpr',
+          name: 'colprimary',
           property: 'color',
           variable: 'color-primary',
         },
         {
-          name: 'colsec',
+          name: 'colsecondary',
           property: 'color',
           variable: 'color-secondary',
         },
@@ -81,26 +70,14 @@ describe('styleguide generator', () => {
         {
           name: 'spacing',
           description: 'Spacing',
-          properties: [
-            {
-              property: 'padding',
-              prefix: 'p',
-            },
-            {
-              property: 'padding-bottom',
-              prefix: 'pb',
-            },
-          ],
-          variables: [
-            {
-              name: 's',
-              value: '8px',
-            },
-            {
-              name: 'm',
-              value: '12px',
-            },
-          ],
+          properties: {
+            p: 'padding',
+            pb: 'padding-bottom',
+          },
+          variables: {
+            s: '8px',
+            m: '12px',
+          },
         },
       ],
     }
@@ -147,6 +124,40 @@ describe('styleguide generator', () => {
           name: 'pb-m',
           property: 'padding-bottom',
           variable: 'spacing-m',
+        },
+      ]
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('media queries', () => {
+    const mediaQueriesConfig: Config = {
+      name: 'Media Queries',
+      variablesGroups: [],
+      mediaQueries: [
+        {
+          name: 'mobile',
+          snippet: '@mob',
+          value: '(max-width: 640px)',
+        },
+        {
+          name: 'tablet',
+          snippet: '@tab',
+          value: '(max-width: 1024px)',
+        },
+      ],
+    }
+
+    it('generates snippets list', () => {
+      const result = getSnippetsList(mediaQueriesConfig)
+      const expected: typeof result = [
+        {
+          name: '@mob',
+          mediaQueryVariable: 'mobile',
+        },
+        {
+          name: '@tab',
+          mediaQueryVariable: 'tablet',
         },
       ]
       expect(result).toEqual(expected)

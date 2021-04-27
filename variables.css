@@ -1,0 +1,40 @@
+@custom-media --mobile (max-width: 640px);
+@custom-media --tablet (max-width: 1024px);
+@custom-media --desktop (min-width: 1025px);
+
+:root {
+  /* Text colors */
+  --color-primary: #111;
+  --color-secondary: #999;
+  --color-link: deepskyblue;
+  --color-link-hover: blue;
+  --color-success: lime;
+  --color-warning: yellow;
+  --color-error: red;
+
+  /* Background colors */
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #eee;
+  --color-bg-success: lime;
+  --color-bg-warning: yellow;
+  --color-bg-error: red;
+
+  /* Font sizes */
+  --font-size-xs: 8px;
+  --font-size-s: 12px;
+  --font-size-m: 16px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
+
+  /* Line heights */
+  --line-height-narrow: 1.1;
+  --line-height-normal: 1.3;
+  --line-height-wide: 1.5;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 12px;
+  --spacing-l: 16px;
+  --spacing-xl: 24px;
+}
