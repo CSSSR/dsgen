@@ -14,12 +14,12 @@ export const testSnippetsIntelliJ = `
       <option name="CSS_PROPERTY_VALUE" value="false" />
     </context>
   </template>
-  <template name="colpr" value="color: var(--color-primary);" description="" toReformat="true" toShortenFQNames="true">
+  <template name="colpr" value="color: var(--color-primary);" description="#111" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="colsec" value="color: var(--color-secondary);" description="" toReformat="true" toShortenFQNames="true">
+  <template name="colsec" value="color: var(--color-secondary);" description="#222" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>

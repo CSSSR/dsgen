@@ -46,11 +46,13 @@ describe('styleguide generator', () => {
           name: 'colprimary',
           property: 'color',
           variable: 'color-primary',
+          description: '#111',
         },
         {
           name: 'colsecondary',
           property: 'color',
           variable: 'color-secondary',
+          description: '#222',
         },
         {
           name: 'colvar',
@@ -109,21 +111,25 @@ describe('styleguide generator', () => {
           name: 'p-s',
           property: 'padding',
           variable: 'spacing-s',
+          description: '8px',
         },
         {
           name: 'p-m',
           property: 'padding',
           variable: 'spacing-m',
+          description: '12px',
         },
         {
           name: 'pb-s',
           property: 'padding-bottom',
           variable: 'spacing-s',
+          description: '8px',
         },
         {
           name: 'pb-m',
           property: 'padding-bottom',
           variable: 'spacing-m',
+          description: '12px',
         },
       ]
       expect(result).toEqual(expected)

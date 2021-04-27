@@ -31,8 +31,13 @@ const formatSnippet = (snippet: Snippet): string => {
         ]
       : ['<option name="CSS_DECLARATION_BLOCK" value="true" />']
 
+  const description =
+    'mediaQueryVariable' in snippet ? undefined : snippet.description
+
   return [
-    `<template name="${snippet.name}" value="${value}" description="" toReformat="true" toShortenFQNames="true">`,
+    `<template name="${snippet.name}" value="${value}" description="${
+      description ?? ''
+    }" toReformat="true" toShortenFQNames="true">`,
     '  <context>',
     ...contextStrings.map((str) => `    ${str}`),
     '  </context>',

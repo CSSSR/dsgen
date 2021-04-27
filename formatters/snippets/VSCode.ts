@@ -6,6 +6,7 @@ type VSCodeSnippet = [
     scope: string
     prefix: string
     body: string | string[]
+    description?: string
   }
 ]
 
@@ -26,5 +27,7 @@ const formatSnippet = (snippet: Snippet): VSCodeSnippet => [
       'mediaQueryVariable' in snippet
         ? [`@media (--${snippet.mediaQueryVariable}) {`, '\t$0', '}']
         : `${snippet.property}: var(--${snippet.variable || '$0'});`,
+    description:
+      'mediaQueryVariable' in snippet ? undefined : snippet.description,
   },
 ]

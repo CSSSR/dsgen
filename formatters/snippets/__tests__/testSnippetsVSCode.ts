@@ -14,11 +14,13 @@ export const testSnippetsVSCode = JSON.stringify(
       scope: 'css,postcss',
       prefix: 'colpr',
       body: 'color: var(--color-primary);',
+      description: '#111',
     },
     colsec: {
       scope: 'css,postcss',
       prefix: 'colsec',
       body: 'color: var(--color-secondary);',
+      description: '#222',
     },
     colv: {
       scope: 'css,postcss',

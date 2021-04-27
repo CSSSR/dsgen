@@ -43,6 +43,7 @@ export type Snippet =
       name: string
       property: string
       variable: string | null
+      description?: string
     }
   | {
       name: string

@@ -18,11 +18,13 @@ describe('snippetsFormatters', () => {
       name: 'colpr',
       property: 'color',
       variable: 'color-primary',
+      description: '#111',
     },
     {
       name: 'colsec',
       property: 'color',
       variable: 'color-secondary',
+      description: '#222',
     },
     {
       name: 'colv',

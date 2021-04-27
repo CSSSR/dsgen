@@ -29,37 +29,44 @@
   "color-primary": {
     "scope": "css,postcss",
     "prefix": "color-primary",
-    "body": "color: var(--color-primary);"
+    "body": "color: var(--color-primary);",
+    "description": "#111"
   },
   "color-secondary": {
     "scope": "css,postcss",
     "prefix": "color-secondary",
-    "body": "color: var(--color-secondary);"
+    "body": "color: var(--color-secondary);",
+    "description": "#999"
   },
   "color-link": {
     "scope": "css,postcss",
     "prefix": "color-link",
-    "body": "color: var(--color-link);"
+    "body": "color: var(--color-link);",
+    "description": "deepskyblue"
   },
   "color-link-hover": {
     "scope": "css,postcss",
     "prefix": "color-link-hover",
-    "body": "color: var(--color-link-hover);"
+    "body": "color: var(--color-link-hover);",
+    "description": "blue"
   },
   "color-success": {
     "scope": "css,postcss",
     "prefix": "color-success",
-    "body": "color: var(--color-success);"
+    "body": "color: var(--color-success);",
+    "description": "lime"
   },
   "color-warning": {
     "scope": "css,postcss",
     "prefix": "color-warning",
-    "body": "color: var(--color-warning);"
+    "body": "color: var(--color-warning);",
+    "description": "yellow"
   },
   "color-error": {
     "scope": "css,postcss",
     "prefix": "color-error",
-    "body": "color: var(--color-error);"
+    "body": "color: var(--color-error);",
+    "description": "red"
   },
   "color-var": {
     "scope": "css,postcss",
@@ -69,27 +76,32 @@
   "bgc-primary": {
     "scope": "css,postcss",
     "prefix": "bgc-primary",
-    "body": "background-color: var(--color-bg-primary);"
+    "body": "background-color: var(--color-bg-primary);",
+    "description": "#fff"
   },
   "bgc-secondary": {
     "scope": "css,postcss",
     "prefix": "bgc-secondary",
-    "body": "background-color: var(--color-bg-secondary);"
+    "body": "background-color: var(--color-bg-secondary);",
+    "description": "#eee"
   },
   "bgc-success": {
     "scope": "css,postcss",
     "prefix": "bgc-success",
-    "body": "background-color: var(--color-bg-success);"
+    "body": "background-color: var(--color-bg-success);",
+    "description": "lime"
   },
   "bgc-warning": {
     "scope": "css,postcss",
     "prefix": "bgc-warning",
-    "body": "background-color: var(--color-bg-warning);"
+    "body": "background-color: var(--color-bg-warning);",
+    "description": "yellow"
   },
   "bgc-error": {
     "scope": "css,postcss",
     "prefix": "bgc-error",
-    "body": "background-color: var(--color-bg-error);"
+    "body": "background-color: var(--color-bg-error);",
+    "description": "red"
   },
   "bgc-var": {
     "scope": "css,postcss",
@@ -99,27 +111,32 @@
   "fill-primary": {
     "scope": "css,postcss",
     "prefix": "fill-primary",
-    "body": "fill: var(--color-bg-primary);"
+    "body": "fill: var(--color-bg-primary);",
+    "description": "#fff"
   },
   "fill-secondary": {
     "scope": "css,postcss",
     "prefix": "fill-secondary",
-    "body": "fill: var(--color-bg-secondary);"
+    "body": "fill: var(--color-bg-secondary);",
+    "description": "#eee"
   },
   "fill-success": {
     "scope": "css,postcss",
     "prefix": "fill-success",
-    "body": "fill: var(--color-bg-success);"
+    "body": "fill: var(--color-bg-success);",
+    "description": "lime"
   },
   "fill-warning": {
     "scope": "css,postcss",
     "prefix": "fill-warning",
-    "body": "fill: var(--color-bg-warning);"
+    "body": "fill: var(--color-bg-warning);",
+    "description": "yellow"
   },
   "fill-error": {
     "scope": "css,postcss",
     "prefix": "fill-error",
-    "body": "fill: var(--color-bg-error);"
+    "body": "fill: var(--color-bg-error);",
+    "description": "red"
   },
   "fill-var": {
     "scope": "css,postcss",
@@ -129,27 +146,32 @@
   "stroke-primary": {
     "scope": "css,postcss",
     "prefix": "stroke-primary",
-    "body": "stroke: var(--color-bg-primary);"
+    "body": "stroke: var(--color-bg-primary);",
+    "description": "#fff"
   },
   "stroke-secondary": {
     "scope": "css,postcss",
     "prefix": "stroke-secondary",
-    "body": "stroke: var(--color-bg-secondary);"
+    "body": "stroke: var(--color-bg-secondary);",
+    "description": "#eee"
   },
   "stroke-success": {
     "scope": "css,postcss",
     "prefix": "stroke-success",
-    "body": "stroke: var(--color-bg-success);"
+    "body": "stroke: var(--color-bg-success);",
+    "description": "lime"
   },
   "stroke-warning": {
     "scope": "css,postcss",
     "prefix": "stroke-warning",
-    "body": "stroke: var(--color-bg-warning);"
+    "body": "stroke: var(--color-bg-warning);",
+    "description": "yellow"
   },
   "stroke-error": {
     "scope": "css,postcss",
     "prefix": "stroke-error",
-    "body": "stroke: var(--color-bg-error);"
+    "body": "stroke: var(--color-bg-error);",
+    "description": "red"
   },
   "stroke-var": {
     "scope": "css,postcss",
@@ -159,416 +181,499 @@
   "fz-xs": {
     "scope": "css,postcss",
     "prefix": "fz-xs",
-    "body": "font-size: var(--font-size-xs);"
+    "body": "font-size: var(--font-size-xs);",
+    "description": "8px"
   },
   "fz-s": {
     "scope": "css,postcss",
     "prefix": "fz-s",
-    "body": "font-size: var(--font-size-s);"
+    "body": "font-size: var(--font-size-s);",
+    "description": "12px"
   },
   "fz-m": {
     "scope": "css,postcss",
     "prefix": "fz-m",
-    "body": "font-size: var(--font-size-m);"
+    "body": "font-size: var(--font-size-m);",
+    "description": "16px"
   },
   "fz-l": {
     "scope": "css,postcss",
     "prefix": "fz-l",
-    "body": "font-size: var(--font-size-l);"
+    "body": "font-size: var(--font-size-l);",
+    "description": "24px"
   },
   "fz-xl": {
     "scope": "css,postcss",
     "prefix": "fz-xl",
-    "body": "font-size: var(--font-size-xl);"
+    "body": "font-size: var(--font-size-xl);",
+    "description": "32px"
   },
   "lh-narrow": {
     "scope": "css,postcss",
     "prefix": "lh-narrow",
-    "body": "line-height: var(--line-height-narrow);"
+    "body": "line-height: var(--line-height-narrow);",
+    "description": "1.1"
   },
   "lh-normal": {
     "scope": "css,postcss",
     "prefix": "lh-normal",
-    "body": "line-height: var(--line-height-normal);"
+    "body": "line-height: var(--line-height-normal);",
+    "description": "1.3"
   },
   "lh-wide": {
     "scope": "css,postcss",
     "prefix": "lh-wide",
-    "body": "line-height: var(--line-height-wide);"
+    "body": "line-height: var(--line-height-wide);",
+    "description": "1.5"
   },
   "p-xs": {
     "scope": "css,postcss",
     "prefix": "p-xs",
-    "body": "padding: var(--spacing-xs);"
+    "body": "padding: var(--spacing-xs);",
+    "description": "4px"
   },
   "p-s": {
     "scope": "css,postcss",
     "prefix": "p-s",
-    "body": "padding: var(--spacing-s);"
+    "body": "padding: var(--spacing-s);",
+    "description": "8px"
   },
   "p-m": {
     "scope": "css,postcss",
     "prefix": "p-m",
-    "body": "padding: var(--spacing-m);"
+    "body": "padding: var(--spacing-m);",
+    "description": "12px"
   },
   "p-l": {
     "scope": "css,postcss",
     "prefix": "p-l",
-    "body": "padding: var(--spacing-l);"
+    "body": "padding: var(--spacing-l);",
+    "description": "16px"
   },
   "p-xl": {
     "scope": "css,postcss",
     "prefix": "p-xl",
-    "body": "padding: var(--spacing-xl);"
+    "body": "padding: var(--spacing-xl);",
+    "description": "24px"
   },
   "pt-xs": {
     "scope": "css,postcss",
     "prefix": "pt-xs",
-    "body": "padding-top: var(--spacing-xs);"
+    "body": "padding-top: var(--spacing-xs);",
+    "description": "4px"
   },
   "pt-s": {
     "scope": "css,postcss",
     "prefix": "pt-s",
-    "body": "padding-top: var(--spacing-s);"
+    "body": "padding-top: var(--spacing-s);",
+    "description": "8px"
   },
   "pt-m": {
     "scope": "css,postcss",
     "prefix": "pt-m",
-    "body": "padding-top: var(--spacing-m);"
+    "body": "padding-top: var(--spacing-m);",
+    "description": "12px"
   },
   "pt-l": {
     "scope": "css,postcss",
     "prefix": "pt-l",
-    "body": "padding-top: var(--spacing-l);"
+    "body": "padding-top: var(--spacing-l);",
+    "description": "16px"
   },
   "pt-xl": {
     "scope": "css,postcss",
     "prefix": "pt-xl",
-    "body": "padding-top: var(--spacing-xl);"
+    "body": "padding-top: var(--spacing-xl);",
+    "description": "24px"
   },
   "pr-xs": {
     "scope": "css,postcss",
     "prefix": "pr-xs",
-    "body": "padding-right: var(--spacing-xs);"
+    "body": "padding-right: var(--spacing-xs);",
+    "description": "4px"
   },
   "pr-s": {
     "scope": "css,postcss",
     "prefix": "pr-s",
-    "body": "padding-right: var(--spacing-s);"
+    "body": "padding-right: var(--spacing-s);",
+    "description": "8px"
   },
   "pr-m": {
     "scope": "css,postcss",
     "prefix": "pr-m",
-    "body": "padding-right: var(--spacing-m);"
+    "body": "padding-right: var(--spacing-m);",
+    "description": "12px"
   },
   "pr-l": {
     "scope": "css,postcss",
     "prefix": "pr-l",
-    "body": "padding-right: var(--spacing-l);"
+    "body": "padding-right: var(--spacing-l);",
+    "description": "16px"
   },
   "pr-xl": {
     "scope": "css,postcss",
     "prefix": "pr-xl",
-    "body": "padding-right: var(--spacing-xl);"
+    "body": "padding-right: var(--spacing-xl);",
+    "description": "24px"
   },
   "pb-xs": {
     "scope": "css,postcss",
     "prefix": "pb-xs",
-    "body": "padding-bottom: var(--spacing-xs);"
+    "body": "padding-bottom: var(--spacing-xs);",
+    "description": "4px"
   },
   "pb-s": {
     "scope": "css,postcss",
     "prefix": "pb-s",
-    "body": "padding-bottom: var(--spacing-s);"
+    "body": "padding-bottom: var(--spacing-s);",
+    "description": "8px"
   },
   "pb-m": {
     "scope": "css,postcss",
     "prefix": "pb-m",
-    "body": "padding-bottom: var(--spacing-m);"
+    "body": "padding-bottom: var(--spacing-m);",
+    "description": "12px"
   },
   "pb-l": {
     "scope": "css,postcss",
     "prefix": "pb-l",
-    "body": "padding-bottom: var(--spacing-l);"
+    "body": "padding-bottom: var(--spacing-l);",
+    "description": "16px"
   },
   "pb-xl": {
     "scope": "css,postcss",
     "prefix": "pb-xl",
-    "body": "padding-bottom: var(--spacing-xl);"
+    "body": "padding-bottom: var(--spacing-xl);",
+    "description": "24px"
   },
   "pl-xs": {
     "scope": "css,postcss",
     "prefix": "pl-xs",
-    "body": "padding-left: var(--spacing-xs);"
+    "body": "padding-left: var(--spacing-xs);",
+    "description": "4px"
   },
   "pl-s": {
     "scope": "css,postcss",
     "prefix": "pl-s",
-    "body": "padding-left: var(--spacing-s);"
+    "body": "padding-left: var(--spacing-s);",
+    "description": "8px"
   },
   "pl-m": {
     "scope": "css,postcss",
     "prefix": "pl-m",
-    "body": "padding-left: var(--spacing-m);"
+    "body": "padding-left: var(--spacing-m);",
+    "description": "12px"
   },
   "pl-l": {
     "scope": "css,postcss",
     "prefix": "pl-l",
-    "body": "padding-left: var(--spacing-l);"
+    "body": "padding-left: var(--spacing-l);",
+    "description": "16px"
   },
   "pl-xl": {
     "scope": "css,postcss",
     "prefix": "pl-xl",
-    "body": "padding-left: var(--spacing-xl);"
+    "body": "padding-left: var(--spacing-xl);",
+    "description": "24px"
   },
   "m-xs": {
     "scope": "css,postcss",
     "prefix": "m-xs",
-    "body": "margin: var(--spacing-xs);"
+    "body": "margin: var(--spacing-xs);",
+    "description": "4px"
   },
   "m-s": {
     "scope": "css,postcss",
     "prefix": "m-s",
-    "body": "margin: var(--spacing-s);"
+    "body": "margin: var(--spacing-s);",
+    "description": "8px"
   },
   "m-m": {
     "scope": "css,postcss",
     "prefix": "m-m",
-    "body": "margin: var(--spacing-m);"
+    "body": "margin: var(--spacing-m);",
+    "description": "12px"
   },
   "m-l": {
     "scope": "css,postcss",
     "prefix": "m-l",
-    "body": "margin: var(--spacing-l);"
+    "body": "margin: var(--spacing-l);",
+    "description": "16px"
   },
   "m-xl": {
     "scope": "css,postcss",
     "prefix": "m-xl",
-    "body": "margin: var(--spacing-xl);"
+    "body": "margin: var(--spacing-xl);",
+    "description": "24px"
   },
   "mt-xs": {
     "scope": "css,postcss",
     "prefix": "mt-xs",
-    "body": "margin-top: var(--spacing-xs);"
+    "body": "margin-top: var(--spacing-xs);",
+    "description": "4px"
   },
   "mt-s": {
     "scope": "css,postcss",
     "prefix": "mt-s",
-    "body": "margin-top: var(--spacing-s);"
+    "body": "margin-top: var(--spacing-s);",
+    "description": "8px"
   },
   "mt-m": {
     "scope": "css,postcss",
     "prefix": "mt-m",
-    "body": "margin-top: var(--spacing-m);"
+    "body": "margin-top: var(--spacing-m);",
+    "description": "12px"
   },
   "mt-l": {
     "scope": "css,postcss",
     "prefix": "mt-l",
-    "body": "margin-top: var(--spacing-l);"
+    "body": "margin-top: var(--spacing-l);",
+    "description": "16px"
   },
   "mt-xl": {
     "scope": "css,postcss",
     "prefix": "mt-xl",
-    "body": "margin-top: var(--spacing-xl);"
+    "body": "margin-top: var(--spacing-xl);",
+    "description": "24px"
   },
   "mr-xs": {
     "scope": "css,postcss",
     "prefix": "mr-xs",
-    "body": "margin-right: var(--spacing-xs);"
+    "body": "margin-right: var(--spacing-xs);",
+    "description": "4px"
   },
   "mr-s": {
     "scope": "css,postcss",
     "prefix": "mr-s",
-    "body": "margin-right: var(--spacing-s);"
+    "body": "margin-right: var(--spacing-s);",
+    "description": "8px"
   },
   "mr-m": {
     "scope": "css,postcss",
     "prefix": "mr-m",
-    "body": "margin-right: var(--spacing-m);"
+    "body": "margin-right: var(--spacing-m);",
+    "description": "12px"
   },
   "mr-l": {
     "scope": "css,postcss",
     "prefix": "mr-l",
-    "body": "margin-right: var(--spacing-l);"
+    "body": "margin-right: var(--spacing-l);",
+    "description": "16px"
   },
   "mr-xl": {
     "scope": "css,postcss",
     "prefix": "mr-xl",
-    "body": "margin-right: var(--spacing-xl);"
+    "body": "margin-right: var(--spacing-xl);",
+    "description": "24px"
   },
   "mb-xs": {
     "scope": "css,postcss",
     "prefix": "mb-xs",
-    "body": "margin-bottom: var(--spacing-xs);"
+    "body": "margin-bottom: var(--spacing-xs);",
+    "description": "4px"
   },
   "mb-s": {
     "scope": "css,postcss",
     "prefix": "mb-s",
-    "body": "margin-bottom: var(--spacing-s);"
+    "body": "margin-bottom: var(--spacing-s);",
+    "description": "8px"
   },
   "mb-m": {
     "scope": "css,postcss",
     "prefix": "mb-m",
-    "body": "margin-bottom: var(--spacing-m);"
+    "body": "margin-bottom: var(--spacing-m);",
+    "description": "12px"
   },
   "mb-l": {
     "scope": "css,postcss",
     "prefix": "mb-l",
-    "body": "margin-bottom: var(--spacing-l);"
+    "body": "margin-bottom: var(--spacing-l);",
+    "description": "16px"
   },
   "mb-xl": {
     "scope": "css,postcss",
     "prefix": "mb-xl",
-    "body": "margin-bottom: var(--spacing-xl);"
+    "body": "margin-bottom: var(--spacing-xl);",
+    "description": "24px"
   },
   "ml-xs": {
     "scope": "css,postcss",
     "prefix": "ml-xs",
-    "body": "margin-left: var(--spacing-xs);"
+    "body": "margin-left: var(--spacing-xs);",
+    "description": "4px"
   },
   "ml-s": {
     "scope": "css,postcss",
     "prefix": "ml-s",
-    "body": "margin-left: var(--spacing-s);"
+    "body": "margin-left: var(--spacing-s);",
+    "description": "8px"
   },
   "ml-m": {
     "scope": "css,postcss",
     "prefix": "ml-m",
-    "body": "margin-left: var(--spacing-m);"
+    "body": "margin-left: var(--spacing-m);",
+    "description": "12px"
   },
   "ml-l": {
     "scope": "css,postcss",
     "prefix": "ml-l",
-    "body": "margin-left: var(--spacing-l);"
+    "body": "margin-left: var(--spacing-l);",
+    "description": "16px"
   },
   "ml-xl": {
     "scope": "css,postcss",
     "prefix": "ml-xl",
-    "body": "margin-left: var(--spacing-xl);"
+    "body": "margin-left: var(--spacing-xl);",
+    "description": "24px"
   },
   "t-xs": {
     "scope": "css,postcss",
     "prefix": "t-xs",
-    "body": "top: var(--spacing-xs);"
+    "body": "top: var(--spacing-xs);",
+    "description": "4px"
   },
   "t-s": {
     "scope": "css,postcss",
     "prefix": "t-s",
-    "body": "top: var(--spacing-s);"
+    "body": "top: var(--spacing-s);",
+    "description": "8px"
   },
   "t-m": {
     "scope": "css,postcss",
     "prefix": "t-m",
-    "body": "top: var(--spacing-m);"
+    "body": "top: var(--spacing-m);",
+    "description": "12px"
   },
   "t-l": {
     "scope": "css,postcss",
     "prefix": "t-l",
-    "body": "top: var(--spacing-l);"
+    "body": "top: var(--spacing-l);",
+    "description": "16px"
   },
   "t-xl": {
     "scope": "css,postcss",
     "prefix": "t-xl",
-    "body": "top: var(--spacing-xl);"
+    "body": "top: var(--spacing-xl);",
+    "description": "24px"
   },
   "r-xs": {
     "scope": "css,postcss",
     "prefix": "r-xs",
-    "body": "right: var(--spacing-xs);"
+    "body": "right: var(--spacing-xs);",
+    "description": "4px"
   },
   "r-s": {
     "scope": "css,postcss",
     "prefix": "r-s",
-    "body": "right: var(--spacing-s);"
+    "body": "right: var(--spacing-s);",
+    "description": "8px"
   },
   "r-m": {
     "scope": "css,postcss",
     "prefix": "r-m",
-    "body": "right: var(--spacing-m);"
+    "body": "right: var(--spacing-m);",
+    "description": "12px"
   },
   "r-l": {
     "scope": "css,postcss",
     "prefix": "r-l",
-    "body": "right: var(--spacing-l);"
+    "body": "right: var(--spacing-l);",
+    "description": "16px"
   },
   "r-xl": {
     "scope": "css,postcss",
     "prefix": "r-xl",
-    "body": "right: var(--spacing-xl);"
+    "body": "right: var(--spacing-xl);",
+    "description": "24px"
   },
   "b-xs": {
     "scope": "css,postcss",
     "prefix": "b-xs",
-    "body": "bottom: var(--spacing-xs);"
+    "body": "bottom: var(--spacing-xs);",
+    "description": "4px"
   },
   "b-s": {
     "scope": "css,postcss",
     "prefix": "b-s",
-    "body": "bottom: var(--spacing-s);"
+    "body": "bottom: var(--spacing-s);",
+    "description": "8px"
   },
   "b-m": {
     "scope": "css,postcss",
     "prefix": "b-m",
-    "body": "bottom: var(--spacing-m);"
+    "body": "bottom: var(--spacing-m);",
+    "description": "12px"
   },
   "b-l": {
     "scope": "css,postcss",
     "prefix": "b-l",
-    "body": "bottom: var(--spacing-l);"
+    "body": "bottom: var(--spacing-l);",
+    "description": "16px"
   },
   "b-xl": {
     "scope": "css,postcss",
     "prefix": "b-xl",
-    "body": "bottom: var(--spacing-xl);"
+    "body": "bottom: var(--spacing-xl);",
+    "description": "24px"
   },
   "l-xs": {
     "scope": "css,postcss",
     "prefix": "l-xs",
-    "body": "left: var(--spacing-xs);"
+    "body": "left: var(--spacing-xs);",
+    "description": "4px"
   },
   "l-s": {
     "scope": "css,postcss",
     "prefix": "l-s",
-    "body": "left: var(--spacing-s);"
+    "body": "left: var(--spacing-s);",
+    "description": "8px"
   },
   "l-m": {
     "scope": "css,postcss",
     "prefix": "l-m",
-    "body": "left: var(--spacing-m);"
+    "body": "left: var(--spacing-m);",
+    "description": "12px"
   },
   "l-l": {
     "scope": "css,postcss",
     "prefix": "l-l",
-    "body": "left: var(--spacing-l);"
+    "body": "left: var(--spacing-l);",
+    "description": "16px"
   },
   "l-xl": {
     "scope": "css,postcss",
     "prefix": "l-xl",
-    "body": "left: var(--spacing-xl);"
+    "body": "left: var(--spacing-xl);",
+    "description": "24px"
   },
   "gap-xs": {
     "scope": "css,postcss",
     "prefix": "gap-xs",
-    "body": "grid-gap: var(--spacing-xs);"
+    "body": "grid-gap: var(--spacing-xs);",
+    "description": "4px"
   },
   "gap-s": {
     "scope": "css,postcss",
     "prefix": "gap-s",
-    "body": "grid-gap: var(--spacing-s);"
+    "body": "grid-gap: var(--spacing-s);",
+    "description": "8px"
   },
   "gap-m": {
     "scope": "css,postcss",
     "prefix": "gap-m",
-    "body": "grid-gap: var(--spacing-m);"
+    "body": "grid-gap: var(--spacing-m);",
+    "description": "12px"
   },
   "gap-l": {
     "scope": "css,postcss",
     "prefix": "gap-l",
-    "body": "grid-gap: var(--spacing-l);"
+    "body": "grid-gap: var(--spacing-l);",
+    "description": "16px"
   },
   "gap-xl": {
     "scope": "css,postcss",
     "prefix": "gap-xl",
-    "body": "grid-gap: var(--spacing-xl);"
+    "body": "grid-gap: var(--spacing-xl);",
+    "description": "24px"
   }
 }

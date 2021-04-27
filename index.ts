@@ -35,7 +35,7 @@ export const getSnippetsList = (config: Config): Snippet[] => {
       return Object.entries(group.properties).flatMap(([prefix, property]) =>
         Object.entries(group.variables)
           .map(
-            ([varName]): Snippet => {
+            ([varName, varValue]): Snippet => {
               const snippetText = getSnippetText(
                 prefix,
                 varName,
@@ -45,6 +45,7 @@ export const getSnippetsList = (config: Config): Snippet[] => {
                 name: snippetText,
                 property,
                 variable: getVariableName(varName, group.name),
+                description: varValue,
               }
             }
           )
