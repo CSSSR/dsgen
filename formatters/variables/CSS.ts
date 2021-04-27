@@ -20,7 +20,7 @@ const formatRoot = (children: string): string =>
 :root {
 ${children}
 }
-`.trim()
+`.trimStart()
 
 const formatGroup = (group: VariablesGroup): string =>
   (group.description ? [`/* ${group.description} */`] : [])

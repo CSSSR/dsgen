@@ -13,12 +13,11 @@ export const testOnlyVariablesCSS = `
   --line-height-normal: 1.3;
   --line-height-wide: 1.5;
 }
-`.trim()
+`.trimStart()
 
 export const testVariablesCSS = `
 @custom-media --mobile (max-width: 640px);
 @custom-media --tablet (max-width: 1024px);
 @custom-media --desktop (min-width: 1025px);
 
-${testOnlyVariablesCSS}
-`.trim()
+${testOnlyVariablesCSS}`.trimStart()

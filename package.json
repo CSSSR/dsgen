@@ -2,11 +2,6 @@
   "name": "css-styleguide-generator",
   "version": "0.1.0",
   "description": "Create your own style guide based using CSS variables",
-  "scripts": {
-    "build": "ts-node main.ts",
-    "test": "jest",
-    "type-check": "tsc --pretty --noEmit"
-  },
   "keywords": [
     "css",
     "styleguide",
@@ -14,11 +9,25 @@
   ],
   "author": "Nikita Golubov",
   "license": "MIT",
+  "scripts": {
+    "build": "ts-node main.ts",
+    "type-check": "tsc --pretty --noEmit",
+    "unit": "jest",
+    "test": "yarn type-check && yarn unit"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,md}": "prettier --write"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "csstype": "^3.0.8",
     "jest": "^26.6.3",
+    "lint-staged": ">=10",
     "prettier": "^2.2.1",
+    "simple-git-hooks": "^2.4.1",
     "ts-jest": "^26.5.5",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"

@@ -53,7 +53,7 @@ describe('styleguide generator', () => {
           variable: 'color-secondary',
         },
         {
-          name: 'colv',
+          name: 'colvar',
           property: 'color',
           variable: null,
         },
