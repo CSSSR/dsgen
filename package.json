@@ -10,10 +10,15 @@
   "author": "Nikita Golubov",
   "license": "MIT",
   "scripts": {
-    "build": "ts-node generator/index.ts",
+    "build": "yarn clean && tsc && chmod +x lib/index.js",
+    "clean": "rm -rf lib",
+    "generate": "yarn build && node lib/index.js",
     "type-check": "tsc --pretty --noEmit",
     "unit": "jest",
     "test": "yarn type-check && yarn unit"
+  },
+  "bin": {
+    "dsgen": "lib/index.js"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

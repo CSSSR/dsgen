@@ -1,6 +1,4 @@
-import { Config } from './generator/types'
-
-export const config: Config = {
+module.exports = {
   name: 'Design System',
   separator: '-',
   variablesGroups: [

@@ -1,7 +1,10 @@
-import { PropertiesHyphen } from 'csstype'
+import type { PropertiesHyphen } from 'csstype'
 
 export type Config = {
   name: string
+  output?: {
+    CSS?: string
+  }
   separator?: string
   variablesGroups: Array<{
     name: string

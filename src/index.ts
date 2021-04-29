@@ -1,12 +1,16 @@
+#!/usr/bin/env node
+
 import * as fs from 'fs'
-import { config } from '../config'
+import * as path from 'path'
 import {
   getSnippetsList,
   getVariablesGroups,
   snippetsFormatters,
   styleFormatters,
 } from './helpers'
-import { SnippetsTarget } from './types'
+import { Config, SnippetsTarget } from './types'
+
+const config: Config = require(path.resolve('./designsystem.config.js'))
 
 const main = async () => {
   await writeVariables()
@@ -22,7 +26,7 @@ const writeVariables = async () => {
   )
 
   await fs.writeFile(
-    './variables.css',
+    config.output?.CSS || './design-system.css',
     variablesText,
     (err) => err && console.error(err)
   )
@@ -31,7 +35,7 @@ const writeVariables = async () => {
 const writeSnippets = async (target: SnippetsTarget) => {
   const snippetsList = getSnippetsList(config)
   const snippetsText = snippetsFormatters[target](config.name, snippetsList)
-  const fileDir = `snippets/${target}`
+  const fileDir = `./snippets/${target}`
   await fs.mkdir(fileDir, { recursive: true }, (err) => err && console.error)
   const fileName = `${fileDir}/${config.name}.${snippetFileExtensionByTarget[target]}`
   await fs.writeFile(fileName, snippetsText, (err) => err && console.error(err))
