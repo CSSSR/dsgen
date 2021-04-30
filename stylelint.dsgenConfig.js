@@ -31,6 +31,7 @@ module.exports = {
         'font-size',
         'line-height',
         '/(^(margin|padding|top|right|bottom|left)|gap$)/',
+        'z-index',
       ],
       {
         ignoreValues: {
@@ -50,6 +51,7 @@ module.exports = {
             '-1px',
             '/(%|vw|vh|vmin|vmax)$/',
           ],
+          'z-index': [...commonIgnoredValues, -1, 0, 1],
         },
         expandShorthand: true,
         autoFixFunc,
