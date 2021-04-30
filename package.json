@@ -26,6 +26,9 @@
   "lint-staged": {
     "*.{js,md}": "prettier --write"
   },
+  "dependencies": {
+    "app-root-path": "^3.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "csstype": "^3.0.8",

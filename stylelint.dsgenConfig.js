@@ -1,6 +1,6 @@
-const path = require('path')
+const appRoot = require('app-root-path')
 
-const designSystemConfig = require(path.resolve('./designsystem.config.js'))
+const designSystemConfig = require(appRoot + '/designsystem.config.js')
 
 const commonIgnoredValues = ['initial', 'inherit', 'unset', 'revert']
 
