@@ -111,7 +111,7 @@ IDE snippets are also generated from config file.
 
 ### WebStorm and other IntelliJ IDEs
 
-IntelliJ IDEs doesn't support project snippets so you'll need to add snippets globally. Place snippets file inside `jba_config/templates` in the [IDE configuration directory](https://www.jetbrains.com/help/webstorm/tuning-the-ide.html#config-directory).
+IntelliJ IDEs doesn't support project snippets, so you'll need to add snippets globally. Place snippets file inside `jba_config/templates` in the [IDE configuration directory](https://www.jetbrains.com/help/webstorm/tuning-the-ide.html#config-directory).
 
 E.g. on Mac OS: `~/Library/Application\ Support/JetBrains/WebStorm2021.1/jba_config/templates/`
 
@@ -122,7 +122,13 @@ You'll need to manually enable/disable snippets groups if you are working on mul
 
 ### Visual Studio Code
 
-Place `.code-snippets` file inside `.vscode` folder of your project. Consider committing this file to git to share and sync snippets with your team.
+By default, VS Code snippets are placed inside `.vscode` folders. That way snippets will be available only for current project. 
+
+You'll need to update `.gitignore` to commit snippets without committing other workspace settings:
+```ignore
+.vscode/*
+!.vscode/*.code-snippets
+```
 
 ## Linting configuration
 

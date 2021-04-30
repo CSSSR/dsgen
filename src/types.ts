@@ -3,6 +3,9 @@ import type { PropertiesHyphen } from 'csstype'
 export type Config = {
   output?: {
     CSS?: string
+    snippets?: {
+      [key in SnippetsTarget]?: string
+    }
   }
   separator?: string
   variablesGroups: Array<{

@@ -36,7 +36,8 @@ const writeVariables = async () => {
 const writeSnippets = async (target: SnippetsTarget) => {
   const snippetsList = getSnippetsList(config)
   const snippetsText = snippetsFormatters[target](projectName, snippetsList)
-  const fileDir = `./snippets/${target}`
+  const fileDir =
+    config.output?.snippets?.[target] || defaultSnippetFolderByTarget[target]
   await fs.mkdir(fileDir, { recursive: true }, (err) => err && console.error)
   const fileName = `${fileDir}/${projectName}.${snippetFileExtensionByTarget[target]}`
   await fs.writeFile(fileName, snippetsText, (err) => err && console.error(err))
@@ -45,6 +46,11 @@ const writeSnippets = async (target: SnippetsTarget) => {
 const snippetFileExtensionByTarget: Record<SnippetsTarget, string> = {
   IntelliJ: 'xml',
   VSCode: 'code-snippets',
+}
+
+const defaultSnippetFolderByTarget: Record<SnippetsTarget, string> = {
+  IntelliJ: 'snippets/IntelliJ',
+  VSCode: '.vscode',
 }
 
 void main()
