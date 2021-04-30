@@ -13,12 +13,14 @@ All these parts are connected via special [configuration file](#configuration-fi
 ## Installation
 
 ### Prerequisites
-* Install and configure PostCSS:
-    1. Install [`postcss`](https://github.com/postcss/postcss#usage) and [`postcss-custom-media`](https://github.com/postcss/postcss-custom-media)
-    1. Add `postcss-custom-media` to `postcss.config.js`
-* Install [`stylelint`](https://stylelint.io/user-guide/get-started)
+
+- Install and configure PostCSS:
+  1. Install [`postcss`](https://github.com/postcss/postcss#usage) and [`postcss-custom-media`](https://github.com/postcss/postcss-custom-media)
+  1. Add `postcss-custom-media` to `postcss.config.js`
+- Install [`stylelint`](https://stylelint.io/user-guide/get-started)
 
 ### Project installation
+
 1. Add this project as dev dependency
 1. Copy [`designsystem.config.js`](designsystem.config.js) to the root of your project
 1. Make changes to your `designsystem.config.js`:
@@ -96,10 +98,27 @@ All these variables and media queries will be converted to [CSS file](#style-var
 
 You can see full example in [`designsystem.config.js`](designsystem.config.js) file in this repo.
 
-
 ## Style variables
 
 CSS variables generated from config are exported to a separate file. It is recommended to not change this file manually as it could be rewritten after config update.
+
+E.g. for a config above these variables will be generated:
+
+```css
+@custom-media --mobile (max-width: 640px);
+@custom-media --tablet (max-width: 1024px);
+
+:root {
+  /* Text colors */
+  --color-primary: #111;
+  --color-secondary: #999;
+
+  /* Font sizes */
+  --font-size-s: 12px;
+  --font-size-m: 16px;
+  --font-size-l: 24px;
+}
+```
 
 ### z-indices
 
@@ -107,7 +126,18 @@ For z-indices we recommend using [`postcss-easy-z`](https://github.com/CSSSR/pos
 
 ## IDE snippets
 
-IDE snippets are also generated from config file. 
+IDE snippets are also generated from config file.
+
+E.g. for a config above these snippets will be generated:
+```
+@mob            -> @media (--mobile) {}
+@tab            -> @media (--tablet) {}
+color-primary   -> color: var(--color-primary);
+color-secondary -> color: var(--color-secondary);
+fz-s            -> font-size: var(--font-size-s);
+fz-m            -> font-size: var(--font-size-m);
+fz-l            -> font-size: var(--font-size-l);
+```
 
 ### WebStorm and other IntelliJ IDEs
 
@@ -122,9 +152,10 @@ You'll need to manually enable/disable snippets groups if you are working on mul
 
 ### Visual Studio Code
 
-By default, VS Code snippets are placed inside `.vscode` folders. That way snippets will be available only for current project. 
+By default, VS Code snippets are placed inside `.vscode` folders. That way snippets will be available only for current project.
 
 You'll need to update `.gitignore` to commit snippets without committing other workspace settings:
+
 ```ignore
 .vscode/*
 !.vscode/*.code-snippets
@@ -180,7 +211,7 @@ To use our config as is:
 ```js
 // stylelint.config.js
 module.exports = {
-  extends: ['css-styleguide-generator/stylelint.dsgenConfig'],
+  extends: ['design-system-generator/stylelint.dsgenConfig'],
 }
 ```
 

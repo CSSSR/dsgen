@@ -1,11 +1,12 @@
 {
-  "name": "css-styleguide-generator",
+  "name": "design-system-generator",
   "version": "0.1.0",
   "description": "Create your own style guide based using CSS variables",
   "keywords": [
     "css",
-    "styleguide",
-    "snippets"
+    "design-system",
+    "snippets",
+    "styleguide"
   ],
   "author": "Nikita Golubov",
   "license": "MIT",
@@ -15,7 +16,8 @@
     "generate": "yarn build && node lib/index.js",
     "type-check": "tsc --pretty --noEmit",
     "unit": "jest",
-    "test": "yarn type-check && yarn unit"
+    "test": "yarn type-check && yarn unit",
+    "prepublishOnly": "yarn build"
   },
   "bin": {
     "dsgen": "lib/index.js"

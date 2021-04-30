@@ -1,7 +1,7 @@
 import { getSnippetsList, getVariablesGroups } from '../helpers'
 import { Config } from '../types'
 
-describe('styleguide generator', () => {
+describe('dsgen', () => {
   describe('color', () => {
     const colorConfig: Config = {
       variablesGroups: [
