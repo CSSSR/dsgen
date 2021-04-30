@@ -1,7 +1,6 @@
 import type { PropertiesHyphen } from 'csstype'
 
 export type Config = {
-  name: string
   output?: {
     CSS?: string
   }

@@ -11,6 +11,7 @@ import {
 import { Config, SnippetsTarget } from './types'
 
 const config: Config = require(path.resolve('./designsystem.config.js'))
+const projectName = require(path.resolve('./package.json')).name
 
 const main = async () => {
   await writeVariables()
@@ -34,10 +35,10 @@ const writeVariables = async () => {
 
 const writeSnippets = async (target: SnippetsTarget) => {
   const snippetsList = getSnippetsList(config)
-  const snippetsText = snippetsFormatters[target](config.name, snippetsList)
+  const snippetsText = snippetsFormatters[target](projectName, snippetsList)
   const fileDir = `./snippets/${target}`
   await fs.mkdir(fileDir, { recursive: true }, (err) => err && console.error)
-  const fileName = `${fileDir}/${config.name}.${snippetFileExtensionByTarget[target]}`
+  const fileName = `${fileDir}/${projectName}.${snippetFileExtensionByTarget[target]}`
   await fs.writeFile(fileName, snippetsText, (err) => err && console.error(err))
 }
 

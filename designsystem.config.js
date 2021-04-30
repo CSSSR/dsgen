@@ -1,5 +1,4 @@
 module.exports = {
-  name: 'Design System',
   separator: '-',
   variablesGroups: [
     {

@@ -4,7 +4,6 @@ import { Config } from '../types'
 describe('styleguide generator', () => {
   describe('color', () => {
     const colorConfig: Config = {
-      name: 'Colors',
       variablesGroups: [
         {
           name: 'color',
@@ -66,7 +65,6 @@ describe('styleguide generator', () => {
 
   describe('spacing', () => {
     const spacingConfig: Config = {
-      name: 'Spacing',
       separator: '-',
       variablesGroups: [
         {
@@ -138,7 +136,6 @@ describe('styleguide generator', () => {
 
   describe('media queries', () => {
     const mediaQueriesConfig: Config = {
-      name: 'Media Queries',
       variablesGroups: [],
       mediaQueries: [
         {

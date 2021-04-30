@@ -1,4 +1,4 @@
-<templateSet group="Design System">
+<templateSet group="css-styleguide-generator">
   <template name="@mob" value="@media (--mobile) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS" value="true" />
