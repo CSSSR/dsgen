@@ -7,7 +7,6 @@ import {
   SnippetsFormatter,
   SnippetsTarget,
   Theme,
-  ThemeName,
   Variable,
   VariablesFormatter,
   VariablesGroup,
@@ -16,52 +15,48 @@ import {
 const DEFAULT_SEPARATOR = ''
 const DEFAULT_WILDCARD_SUFFIX = 'var'
 
-export const getThemes = (config: Config): Theme[] => {
-  const themesMap = Object.entries(
-    config.themes ?? { default: ':root' }
-  ).reduce<Record<ThemeName, Theme>>((acc, [themeName, themeSelector]) => {
-    acc[themeName] = {
+export const getThemes = (config: Config): Theme[] =>
+  Object.entries(config.themes ?? { default: ':root' }).map<Theme>(
+    ([themeName, themeSelector], themeIdx) => ({
       selector: themeSelector,
-      variablesGroups: [],
-    }
-    return acc
-  }, {})
+      variablesGroups: getThemeVariablesGroups(config, themeName, themeIdx),
+    })
+  )
 
-  config.variablesGroups.forEach((group) => {
-    Object.keys(themesMap).forEach((themeName, themeIdx) => {
-      const themeVariables = Object.entries(group.variables)
-        .map<Variable | null>(([varName, varValue]) => {
-          const name = getVariableName(varName, group.name)
-
-          if (typeof varValue === 'string') {
-            return themeIdx === 0
-              ? {
-                  name,
-                  value: varValue,
-                }
-              : null
-          } else {
-            return varValue[themeName]
-              ? {
-                  name,
-                  value: varValue[themeName],
-                }
-              : null
-          }
-        })
-        .filter((v): v is Variable => !!v)
+const getThemeVariablesGroups = (
+  config: Config,
+  themeName: string,
+  themeIdx: number
+): VariablesGroup[] =>
+  config.variablesGroups
+    .map<VariablesGroup | undefined>((group) => {
+      const themeVariables = getThemeVariables(group, themeName, themeIdx)
 
       if (themeVariables.length) {
-        themesMap[themeName].variablesGroups.push({
+        return {
           description: group.description,
           variables: themeVariables,
-        })
+        }
       }
     })
-  })
+    .filter(isNotNil)
 
-  return Object.values(themesMap)
-}
+const getThemeVariables = (
+  group: Config['variablesGroups'][number],
+  themeName: string,
+  themeIdx: number
+): Variable[] =>
+  Object.entries(group.variables)
+    .map<Variable | null>(([varName, varValue]) => {
+      const name = getVariableName(varName, group.name)
+
+      if (typeof varValue === 'string') {
+        return themeIdx === 0 ? { name, value: varValue } : null
+      } else {
+        return varValue[themeName] ? { name, value: varValue[themeName] } : null
+      }
+    })
+    .filter(isNotNil)
 
 export const getSnippetsList = (config: Config): Snippet[] => {
   const mediaQuerySnippets: Snippet[] =
@@ -129,3 +124,6 @@ export const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
   IntelliJ: snippetsFormatterIntelliJ,
   VSCode: snippetsFormatterVSCode,
 }
+
+const isNotNil = <T>(v: T): v is Exclude<T, null | undefined> =>
+  v !== null && v !== undefined

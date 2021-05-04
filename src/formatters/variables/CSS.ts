@@ -11,21 +11,16 @@ export const variablesFormatterCSS: VariablesFormatter = (
 ) => {
   const mediaQueriesText = formatMediaQueries(mediaQueries)
   const themesText = themes
-    .map((theme) =>
-      formatTheme(
-        theme.selector,
-        theme.variablesGroups.map(formatGroup).join('\n\n')
-      )
-    )
+    .map((theme) => formatTheme(theme.selector, theme.variablesGroups))
     .join('\n')
 
   return [mediaQueriesText, themesText].filter(Boolean).join('\n\n')
 }
 
-const formatTheme = (selector: string, children: string): string =>
+const formatTheme = (selector: string, groups: VariablesGroup[]): string =>
   `
 ${selector} {
-${children}
+${groups.map(formatGroup).join('\n\n')}
 }
 `.trimStart()
 
