@@ -13,6 +13,12 @@ export const testOnlyVariablesCSS = `
   --line-height-normal: 1.3;
   --line-height-wide: 1.5;
 }
+
+html.theme_dark {
+  /* Text colors */
+  --color-text-primary: #eee;
+  --color-text-secondary: #ddd;
+}
 `.trimStart()
 
 export const testVariablesCSS = `

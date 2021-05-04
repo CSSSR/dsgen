@@ -6,6 +6,9 @@ import {
   Snippet,
   SnippetsFormatter,
   SnippetsTarget,
+  Theme,
+  ThemeName,
+  Variable,
   VariablesFormatter,
   VariablesGroup,
 } from './types'
@@ -13,14 +16,51 @@ import {
 const DEFAULT_SEPARATOR = ''
 const DEFAULT_WILDCARD_SUFFIX = 'var'
 
-export const getVariablesGroups = (config: Config): VariablesGroup[] => {
-  return config.variablesGroups.map((group) => ({
-    description: group.description,
-    variables: Object.entries(group.variables).map(([varName, varValue]) => ({
-      name: getVariableName(varName, group.name),
-      value: varValue,
-    })),
-  }))
+export const getThemes = (config: Config): Theme[] => {
+  const themesMap = Object.entries(
+    config.themes ?? { default: ':root' }
+  ).reduce<Record<ThemeName, Theme>>((acc, [themeName, themeSelector]) => {
+    acc[themeName] = {
+      selector: themeSelector,
+      variablesGroups: [],
+    }
+    return acc
+  }, {})
+
+  config.variablesGroups.forEach((group) => {
+    Object.keys(themesMap).forEach((themeName, themeIdx) => {
+      const themeVariables = Object.entries(group.variables)
+        .map<Variable | null>(([varName, varValue]) => {
+          const name = getVariableName(varName, group.name)
+
+          if (typeof varValue === 'string') {
+            return themeIdx === 0
+              ? {
+                  name,
+                  value: varValue,
+                }
+              : null
+          } else {
+            return varValue[themeName]
+              ? {
+                  name,
+                  value: varValue[themeName],
+                }
+              : null
+          }
+        })
+        .filter((v): v is Variable => !!v)
+
+      if (themeVariables.length) {
+        themesMap[themeName].variablesGroups.push({
+          description: group.description,
+          variables: themeVariables,
+        })
+      }
+    })
+  })
+
+  return Object.values(themesMap)
 }
 
 export const getSnippetsList = (config: Config): Snippet[] => {
@@ -45,7 +85,10 @@ export const getSnippetsList = (config: Config): Snippet[] => {
                 name: snippetText,
                 property,
                 variable: getVariableName(varName, group.name),
-                description: varValue,
+                description:
+                  typeof varValue === 'string'
+                    ? varValue
+                    : Object.values(varValue)[0],
               }
             }
           )

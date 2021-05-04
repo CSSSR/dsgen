@@ -1,4 +1,4 @@
-import { getSnippetsList, getVariablesGroups } from '../helpers'
+import { getSnippetsList, getThemes } from '../helpers'
 import { Config } from '../types'
 
 describe('dsgen', () => {
@@ -20,17 +20,22 @@ describe('dsgen', () => {
     }
 
     it('generates variables list', () => {
-      const result = getVariablesGroups(colorConfig)
+      const result = getThemes(colorConfig)
       const expected: typeof result = [
         {
-          variables: [
+          selector: ':root',
+          variablesGroups: [
             {
-              name: 'color-primary',
-              value: '#111',
-            },
-            {
-              name: 'color-secondary',
-              value: '#222',
+              variables: [
+                {
+                  name: 'color-primary',
+                  value: '#111',
+                },
+                {
+                  name: 'color-secondary',
+                  value: '#222',
+                },
+              ],
             },
           ],
         },
@@ -83,18 +88,23 @@ describe('dsgen', () => {
     }
 
     it('generates variables list', () => {
-      const result = getVariablesGroups(spacingConfig)
+      const result = getThemes(spacingConfig)
       const expected: typeof result = [
         {
-          description: 'Spacing',
-          variables: [
+          selector: ':root',
+          variablesGroups: [
             {
-              name: 'spacing-s',
-              value: '8px',
-            },
-            {
-              name: 'spacing-m',
-              value: '12px',
+              description: 'Spacing',
+              variables: [
+                {
+                  name: 'spacing-s',
+                  value: '8px',
+                },
+                {
+                  name: 'spacing-m',
+                  value: '12px',
+                },
+              ],
             },
           ],
         },
@@ -128,6 +138,110 @@ describe('dsgen', () => {
           property: 'padding-bottom',
           variable: 'spacing-m',
           description: '12px',
+        },
+      ]
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('themes', () => {
+    const themesConfig: Config = {
+      themes: {
+        default: ':root',
+        dark: 'html.theme_dark',
+      },
+      variablesGroups: [
+        {
+          name: 'color',
+          withWildcard: true,
+          properties: {
+            col: 'color',
+          },
+          variables: {
+            primary: {
+              default: '#111',
+              dark: '#eee',
+            },
+            secondary: {
+              default: '#222',
+              dark: '#ddd',
+            },
+            link: '#888',
+          },
+        },
+      ],
+    }
+
+    it('generates variables list', () => {
+      const result = getThemes(themesConfig)
+      const expected: typeof result = [
+        {
+          selector: ':root',
+          variablesGroups: [
+            {
+              variables: [
+                {
+                  name: 'color-primary',
+                  value: '#111',
+                },
+                {
+                  name: 'color-secondary',
+                  value: '#222',
+                },
+                {
+                  name: 'color-link',
+                  value: '#888',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          selector: 'html.theme_dark',
+          variablesGroups: [
+            {
+              variables: [
+                {
+                  name: 'color-primary',
+                  value: '#eee',
+                },
+                {
+                  name: 'color-secondary',
+                  value: '#ddd',
+                },
+              ],
+            },
+          ],
+        },
+      ]
+      expect(result).toEqual(expected)
+    })
+
+    it('generates snippets list', () => {
+      const result = getSnippetsList(themesConfig)
+      const expected: typeof result = [
+        {
+          name: 'colprimary',
+          property: 'color',
+          variable: 'color-primary',
+          description: '#111',
+        },
+        {
+          name: 'colsecondary',
+          property: 'color',
+          variable: 'color-secondary',
+          description: '#222',
+        },
+        {
+          name: 'collink',
+          property: 'color',
+          variable: 'color-link',
+          description: '#888',
+        },
+        {
+          name: 'colvar',
+          property: 'color',
+          variable: null,
         },
       ]
       expect(result).toEqual(expected)

@@ -38,3 +38,11 @@
   --spacing-l: 16px;
   --spacing-xl: 24px;
 }
+
+html.theme_dark {
+  /* Text colors */
+  --color-primary: #eee;
+
+  /* Background colors */
+  --color-bg-primary: #111;
+}

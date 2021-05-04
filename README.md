@@ -100,6 +100,27 @@ All these variables and media queries will be converted to [CSS file](#style-var
 
 You can see full example in [`designsystem.config.js`](designsystem.config.js) file in this repo.
 
+### Theming support
+
+To create multiple themes:
+
+* Add `themes` object to config, where key is theme name and value is theme selector. E.g.:
+  ```
+  themes: {
+    default: ':root',
+    dark: 'html.theme_dark',
+  },
+  ```
+* Now you can add multiple values for each variable:
+  ```
+  variables: {
+    primary: {
+      default: '#111',
+      dark: '#eee',
+    },
+  }
+  ```
+
 ## Style variables
 
 CSS variables generated from config are exported to a separate file. It is recommended to not change this file manually as it could be rewritten after config update.

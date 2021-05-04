@@ -4,7 +4,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import {
   getSnippetsList,
-  getVariablesGroups,
+  getThemes,
   snippetsFormatters,
   styleFormatters,
 } from './helpers'
@@ -20,11 +20,8 @@ const main = async () => {
 }
 
 const writeVariables = async () => {
-  const variablesGroups = getVariablesGroups(config)
-  const variablesText = styleFormatters.CSS(
-    variablesGroups,
-    config.mediaQueries || []
-  )
+  const themes = getThemes(config)
+  const variablesText = styleFormatters.CSS(themes, config.mediaQueries || [])
 
   await fs.writeFile(
     config.output?.CSS || './design-system.css',

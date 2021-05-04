@@ -8,6 +8,7 @@ export type Config = {
     }
   }
   separator?: string
+  themes?: Record<ThemeName, string>
   variablesGroups: Array<{
     name: string
     description?: string
@@ -20,11 +21,17 @@ export type Config = {
 
 type PropertySnippet = string
 type VariableName = string
-type VariableValue = string
+export type ThemeName = string
+type VariableValue = string | Record<ThemeName, string>
 
 export type VariablesGroup = {
   description?: string
   variables: Variable[]
+}
+
+export type Theme = {
+  selector: string
+  variablesGroups: VariablesGroup[]
 }
 
 export type Variable = {
@@ -39,7 +46,7 @@ export type MediaQuery = {
 }
 
 export type VariablesFormatter = (
-  variablesGroups: VariablesGroup[],
+  themes: Theme[],
   mediaQueries: MediaQuery[]
 ) => string
 

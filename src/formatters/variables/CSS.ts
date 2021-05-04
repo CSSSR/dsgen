@@ -6,18 +6,25 @@ import {
 } from '../../types'
 
 export const variablesFormatterCSS: VariablesFormatter = (
-  variablesGroups,
+  themes,
   mediaQueries
 ) => {
   const mediaQueriesText = formatMediaQueries(mediaQueries)
-  const groupsText = variablesGroups.map(formatGroup).join('\n\n')
+  const themesText = themes
+    .map((theme) =>
+      formatTheme(
+        theme.selector,
+        theme.variablesGroups.map(formatGroup).join('\n\n')
+      )
+    )
+    .join('\n')
 
-  return [mediaQueriesText, formatRoot(groupsText)].filter(Boolean).join('\n\n')
+  return [mediaQueriesText, themesText].filter(Boolean).join('\n\n')
 }
 
-const formatRoot = (children: string): string =>
+const formatTheme = (selector: string, children: string): string =>
   `
-:root {
+${selector} {
 ${children}
 }
 `.trimStart()

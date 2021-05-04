@@ -1,5 +1,9 @@
 module.exports = {
   separator: '-',
+  themes: {
+    default: ':root',
+    dark: 'html.theme_dark',
+  },
   variablesGroups: [
     {
       name: 'color',
@@ -9,7 +13,10 @@ module.exports = {
         color: 'color',
       },
       variables: {
-        primary: '#111',
+        primary: {
+          default: '#111',
+          dark: '#eee',
+        },
         secondary: '#999',
         link: 'deepskyblue',
         'link-hover': 'blue',
@@ -28,7 +35,10 @@ module.exports = {
         stroke: 'stroke',
       },
       variables: {
-        primary: '#fff',
+        primary: {
+          default: '#fff',
+          dark: '#111',
+        },
         secondary: '#eee',
         success: 'lime',
         warning: 'yellow',
