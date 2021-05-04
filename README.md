@@ -1,3 +1,5 @@
+# 🚧 This project is under heavy development 🚧
+
 The goal of this project is to ease creation and usage of a basic CSS design system. Our aim to bring Tailwind's design system benefits to a regular CSS workflow.
 
 As a result you will use a configurable set of CSS variables throughout your styles while your IDE and linter will assist you with snippets and auto fixing.
@@ -149,6 +151,8 @@ Then restart IDE, and you'll see snippets group available in Preferences:
 ![](http://s.csssr.ru/U07B23NE8/2021-04-30-12-34-34-sce35.jpg)
 
 You'll need to manually enable/disable snippets groups if you are working on multiple projects with different design system configs.
+
+To make this process easier please vote for [per-project templates in IntelliJ IDEs](https://youtrack.jetbrains.com/issue/IDEA-242159).
 
 ### Visual Studio Code
 
