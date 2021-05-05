@@ -1,4 +1,5 @@
 import type { PropertiesHyphen } from 'csstype'
+import { IgnoreValueList } from 'stylelint-declaration-strict-value/dist/defaults'
 
 export type Config = {
   output?: {
@@ -15,6 +16,7 @@ export type Config = {
     withWildcard?: true
     properties: Record<PropertySnippet, keyof PropertiesHyphen>
     variables: Record<VariableName, VariableValue>
+    allowedValues?: IgnoreValueList
   }>
   mediaQueries?: MediaQuery[]
 }

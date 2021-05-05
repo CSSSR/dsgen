@@ -98,6 +98,7 @@ module.exports = {
         l: '16px',
         xl: '24px',
       },
+      allowedValues: ['-1px', '1px'],
     },
   ],
   mediaQueries: [

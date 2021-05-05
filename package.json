@@ -29,13 +29,15 @@
     "*.{js,md}": "prettier --write"
   },
   "dependencies": {
-    "app-root-path": "^3.0.0"
+    "app-root-path": "^3.0.0",
+    "stylelint-declaration-strict-value": "^1.7.12"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "csstype": "^3.0.8",
     "jest": "^26.6.3",
     "lint-staged": ">=10",
+    "postcss": "^8.2.13",
     "prettier": "^2.2.1",
     "simple-git-hooks": "^2.4.1",
     "ts-jest": "^26.5.5",

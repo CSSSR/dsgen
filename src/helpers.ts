@@ -125,5 +125,5 @@ export const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
   VSCode: snippetsFormatterVSCode,
 }
 
-const isNotNil = <T>(v: T): v is Exclude<T, null | undefined> =>
+export const isNotNil = <T>(v: T): v is Exclude<T, null | undefined> =>
   v !== null && v !== undefined
