@@ -1,12 +1,10 @@
 const appRoot = require('app-root-path')
 const { getStrictValueRule } = require('./lib/stylelint')
-const designSystemConfig = require(appRoot + '/designsystem.config.js')
+const dsgenConfig = require(appRoot + '/dsgen.config.js')
 
 module.exports = {
   plugins: ['stylelint-declaration-strict-value'],
   rules: {
-    'scale-unlimited/declaration-strict-value': getStrictValueRule(
-      designSystemConfig
-    ),
+    'scale-unlimited/declaration-strict-value': getStrictValueRule(dsgenConfig),
   },
 }

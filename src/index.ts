@@ -10,7 +10,7 @@ import {
 } from './helpers'
 import { Config, SnippetsTarget } from './types'
 
-const config: Config = require(path.resolve('./designsystem.config.js'))
+const config: Config = require(path.resolve('./dsgen.config.js'))
 const projectName = require(path.resolve('./package.json')).name
 
 const main = async () => {

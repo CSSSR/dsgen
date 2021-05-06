@@ -24,8 +24,8 @@ All these parts are connected via special [configuration file](#configuration-fi
 ### Project installation
 
 1. Add this project as dev dependency
-1. Copy [`designsystem.config.js`](designsystem.config.js) to the root of your project
-1. Make changes to your `designsystem.config.js`:
+1. Copy [`dsgen.config.js`](dsgen.config.js) to the root of your project
+1. Make changes to your `dsgen.config.js`:
    - Set name of your project
    - Adjust values and properties list to your project's needs
    - Adjust media queries list
@@ -39,14 +39,14 @@ All these parts are connected via special [configuration file](#configuration-fi
    @import 'design-system.css';
    ```
 1. Add snippets
-1. [Configure `stylelint`](#extending-stylelint-config)
+1. [Configure `stylelint`](#configuring-stylelint)
 
 ## Configuration file
 
 Here's an example of our configuration file:
 
 ```js
-// designsystem.config.js
+// dsgen.config.js
 module.exports = {
   separator: '-',
   variablesGroups: [
@@ -98,7 +98,7 @@ This example contains:
 
 All these variables and media queries will be converted to [CSS file](#style-variables) and [IDE snippets](#ide-snippets).
 
-You can see full example in [`designsystem.config.js`](designsystem.config.js) file in this repo.
+You can see full example in [`dsgen.config.js`](dsgen.config.js) file in this repo.
 
 ### Theming support
 
@@ -190,11 +190,20 @@ You'll need to update `.gitignore` to commit snippets without committing other w
 
 We use linting to enforce usage of CSS variables instead of absolute values. To achieve that we use [`stylelint-declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value) plugin for [`stylelint`](https://stylelint.io).
 
+### Configuring stylelint
+
+```js
+// stylelint.config.js
+module.exports = {
+  extends: ['design-system-generator/stylelint.config'],
+}
+```
+
 ### Auto fixing
 
 Other benefit of using `stylelint-declaration-strict-value` is that it supports [auto fixing](https://github.com/AndyOGo/stylelint-declaration-strict-value). We use `dsgen` config file to determine which absolute values should be replaced with CSS variables.
 
-E.g. with this config
+E.g. with this config:
 
 ```js
 // dsgen.config.js
@@ -224,27 +233,5 @@ module.exports = {
 /* becomes */
 .component {
   font-size: var(--font-size-m);
-}
-```
-
-### Extending stylelint config
-
-You can either extend our standard config or create your own custom config and extend it.
-
-To use our config as is:
-
-```js
-// stylelint.config.js
-module.exports = {
-  extends: ['design-system-generator/stylelint.dsgenConfig'],
-}
-```
-
-To customize config just copy [stylelint.dsgenConfig.js](stylelint.dsgenConfig.js) to the root of your project, make changes and extend it in your main Stylelint config file:
-
-```js
-// stylelint.config.js
-module.exports = {
-  extends: ['./stylelint.dsgenConfig'],
 }
 ```
