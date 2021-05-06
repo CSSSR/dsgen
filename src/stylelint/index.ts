@@ -47,6 +47,7 @@ export const getStrictValueRule = (
       },
       expandShorthand: true,
       autoFixFunc: getAutoFixFunc(config),
+      severity: config?.linting?.severity ?? 'error',
     },
   ]
 }

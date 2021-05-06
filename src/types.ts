@@ -19,6 +19,9 @@ export type Config = {
     allowedValues?: IgnoreValueList
   }>
   mediaQueries?: MediaQuery[]
+  linting?: {
+    severity?: 'warning' | 'error'
+  }
 }
 
 type PropertySnippet = string

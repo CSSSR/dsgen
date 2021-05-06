@@ -48,6 +48,9 @@ describe('getStrictValueRule', () => {
           allowedValues: ['-1px', '1px'],
         },
       ],
+      linting: {
+        severity: 'warning',
+      },
     }
 
     const result = getStrictValueRule(config)
@@ -75,6 +78,7 @@ describe('getStrictValueRule', () => {
         },
         expandShorthand: true,
         autoFixFunc: expect.any(Function),
+        severity: 'warning',
       },
     ]
 
