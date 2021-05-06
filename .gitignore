@@ -1,4 +1,6 @@
 yarn-error.log
 .idea
+.vscode/*
+!.vscode/design-system-generator.code-snippets
 node_modules
 lib

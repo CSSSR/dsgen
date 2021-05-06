@@ -1,0 +1,18 @@
+# Dev
+.vscode
+.github
+.idea
+
+# Deps
+yarn.lock
+yarn-error.log
+
+# Sourcecode
+/design-system.css
+/snippets
+/src
+
+# Configs
+jest.config.js
+prettier.config.js
+tsconfig.json

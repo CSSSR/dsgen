@@ -1,15 +1,22 @@
 {
   "name": "design-system-generator",
   "version": "0.1.0",
-  "description": "Create your own style guide based using CSS variables",
+  "description": "Create your own design system using CSS variables",
   "keywords": [
     "css",
     "design-system",
     "snippets",
     "styleguide"
   ],
-  "author": "Nikita Golubov",
+  "author": "Nikita Golubov <neekitkah@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSSSR/design-system-generator.git"
+  },
+  "bin": {
+    "dsgen": "lib/index.js"
+  },
   "scripts": {
     "build": "yarn clean && tsc && chmod +x lib/index.js",
     "clean": "rm -rf lib",
@@ -18,9 +25,6 @@
     "unit": "jest",
     "test": "yarn type-check && yarn unit",
     "prepublishOnly": "yarn build"
-  },
-  "bin": {
-    "dsgen": "lib/index.js"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
