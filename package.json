@@ -1,5 +1,5 @@
 {
-  "name": "design-system-generator",
+  "name": "dsgen",
   "version": "0.1.0",
   "description": "Create your own design system using CSS variables",
   "keywords": [
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CSSSR/design-system-generator.git"
+    "url": "git+https://github.com/CSSSR/dsgen.git"
   },
   "bin": {
     "dsgen": "lib/index.js"

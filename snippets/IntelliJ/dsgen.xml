@@ -1,4 +1,4 @@
-<templateSet group="design-system-generator">
+<templateSet group="dsgen">
   <template name="@mob" value="@media (--mobile) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS" value="true" />

@@ -195,7 +195,7 @@ We use linting to enforce usage of CSS variables instead of absolute values. To 
 ```js
 // stylelint.config.js
 module.exports = {
-  extends: ['design-system-generator/stylelint.config'],
+  extends: ['dsgen/stylelint.config'],
 }
 ```
 
