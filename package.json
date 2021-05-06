@@ -24,7 +24,7 @@
     "type-check": "tsc --pretty --noEmit",
     "unit": "jest",
     "test": "yarn type-check && yarn unit",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn --frozen-lockfile && yarn build"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
