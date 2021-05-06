@@ -61,12 +61,12 @@ const getAutoFixFunc = (config: Config): AutoFixFunc => (node) => {
     )
 
     if (configGroup) {
-      const variable = Object.keys(configGroup.variables).find(
+      const variables = Object.keys(configGroup.variables).filter(
         (key) => configGroup.variables[key] === value
       )
 
-      if (variable) {
-        return `var(--${configGroup.name}${config.separator}${variable})`
+      if (variables.length === 1) {
+        return `var(--${configGroup.name}${config.separator}${variables[0]})`
       }
     }
 
