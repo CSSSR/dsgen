@@ -1,5 +1,15 @@
-import type { PropertiesHyphen } from 'csstype'
 import { IgnoreValueList } from 'stylelint-declaration-strict-value/dist/defaults'
+
+export const TOKEN_GROUPS = [
+  'textColors',
+  'bgColors',
+  'fontSizes',
+  'lineHeights',
+  'space',
+  'shadows',
+] as const
+
+export type TokenGroup = typeof TOKEN_GROUPS[number]
 
 export type Config = {
   output?: {
@@ -10,23 +20,17 @@ export type Config = {
   }
   linting?: {
     severity?: 'warning' | 'error'
+    allowedSpaceValues?: IgnoreValueList
   }
   themes?: Record<ThemeName, string>
-  variablesGroups: Array<{
-    name: string
-    description?: string
-    withWildcard?: true
-    properties: Record<PropertySnippet, keyof PropertiesHyphen>
-    variables: Record<VariableName, VariableValue>
-    allowedValues?: IgnoreValueList
-  }>
   mediaQueries?: MediaQuery[]
+} & {
+  [key in TokenGroup]?: VariablesMap
 }
 
-type PropertySnippet = string
-type VariableName = string
+export type VariablesMap = Record<string, VariableValue>
 export type ThemeName = string
-type VariableValue = string | Record<ThemeName, string>
+export type VariableValue = string | Record<ThemeName, string>
 
 export type VariablesGroup = {
   description?: string

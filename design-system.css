@@ -32,11 +32,15 @@
   --line-height-wide: 1.5;
 
   /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-s: 8px;
-  --spacing-m: 12px;
-  --spacing-l: 16px;
-  --spacing-xl: 24px;
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-l: 16px;
+  --space-xl: 24px;
+
+  /* Shadows */
+  --shadow-modal: 0px 5px 15px rgba(43, 51, 62, 0.5);
+  --shadow-light: 0px 4px 8px rgba(126, 143, 164, 0.15);
 }
 
 html.theme_dark {
@@ -45,4 +49,7 @@ html.theme_dark {
 
   /* Background colors */
   --color-bg-primary: #111;
+
+  /* Shadows */
+  --shadow-light: 0px 5px 15px rgba(43, 51, 62, 0.2);
 }

@@ -90,6 +90,36 @@
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
+  <template name="border-color-primary" value="border-color: var(--color-bg-primary);" description="#fff" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-secondary" value="border-color: var(--color-bg-secondary);" description="#eee" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-success" value="border-color: var(--color-bg-success);" description="lime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-warning" value="border-color: var(--color-bg-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-error" value="border-color: var(--color-bg-error);" description="red" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-var" value="border-color: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
   <template name="fill-primary" value="fill: var(--color-bg-primary);" description="#fff" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
@@ -175,6 +205,11 @@
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
+  <template name="fz-var" value="font-size: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
   <template name="lh-narrow" value="line-height: var(--line-height-narrow);" description="1.1" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
@@ -190,377 +225,487 @@
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="p-xs" value="padding: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="lh-var" value="line-height: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="p-s" value="padding: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="p-xs" value="padding: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="p-m" value="padding: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="p-s" value="padding: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="p-l" value="padding: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="p-m" value="padding: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="p-xl" value="padding: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="p-l" value="padding: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pt-xs" value="padding-top: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="p-xl" value="padding: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pt-s" value="padding-top: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="p-var" value="padding: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pt-m" value="padding-top: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="pt-xs" value="padding-top: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pt-l" value="padding-top: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="pt-s" value="padding-top: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pt-xl" value="padding-top: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="pt-m" value="padding-top: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pr-xs" value="padding-right: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="pt-l" value="padding-top: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pr-s" value="padding-right: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="pt-xl" value="padding-top: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pr-m" value="padding-right: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="pt-var" value="padding-top: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pr-l" value="padding-right: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="pr-xs" value="padding-right: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pr-xl" value="padding-right: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="pr-s" value="padding-right: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pb-xs" value="padding-bottom: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="pr-m" value="padding-right: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pb-s" value="padding-bottom: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="pr-l" value="padding-right: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pb-m" value="padding-bottom: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="pr-xl" value="padding-right: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pb-l" value="padding-bottom: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="pr-var" value="padding-right: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pb-xl" value="padding-bottom: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="pb-xs" value="padding-bottom: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pl-xs" value="padding-left: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="pb-s" value="padding-bottom: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pl-s" value="padding-left: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="pb-m" value="padding-bottom: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pl-m" value="padding-left: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="pb-l" value="padding-bottom: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pl-l" value="padding-left: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="pb-xl" value="padding-bottom: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="pl-xl" value="padding-left: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="pb-var" value="padding-bottom: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="m-xs" value="margin: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="pl-xs" value="padding-left: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="m-s" value="margin: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="pl-s" value="padding-left: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="m-m" value="margin: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="pl-m" value="padding-left: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="m-l" value="margin: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="pl-l" value="padding-left: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="m-xl" value="margin: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="pl-xl" value="padding-left: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mt-xs" value="margin-top: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="pl-var" value="padding-left: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mt-s" value="margin-top: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="m-xs" value="margin: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mt-m" value="margin-top: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="m-s" value="margin: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mt-l" value="margin-top: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="m-m" value="margin: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mt-xl" value="margin-top: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="m-l" value="margin: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mr-xs" value="margin-right: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="m-xl" value="margin: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mr-s" value="margin-right: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="m-var" value="margin: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mr-m" value="margin-right: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="mt-xs" value="margin-top: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mr-l" value="margin-right: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="mt-s" value="margin-top: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mr-xl" value="margin-right: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="mt-m" value="margin-top: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mb-xs" value="margin-bottom: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="mt-l" value="margin-top: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mb-s" value="margin-bottom: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="mt-xl" value="margin-top: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mb-m" value="margin-bottom: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="mt-var" value="margin-top: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mb-l" value="margin-bottom: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="mr-xs" value="margin-right: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="mb-xl" value="margin-bottom: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="mr-s" value="margin-right: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="ml-xs" value="margin-left: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="mr-m" value="margin-right: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="ml-s" value="margin-left: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="mr-l" value="margin-right: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="ml-m" value="margin-left: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="mr-xl" value="margin-right: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="ml-l" value="margin-left: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="mr-var" value="margin-right: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="ml-xl" value="margin-left: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="mb-xs" value="margin-bottom: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="t-xs" value="top: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="mb-s" value="margin-bottom: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="t-s" value="top: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="mb-m" value="margin-bottom: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="t-m" value="top: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="mb-l" value="margin-bottom: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="t-l" value="top: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="mb-xl" value="margin-bottom: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="t-xl" value="top: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="mb-var" value="margin-bottom: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="r-xs" value="right: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="ml-xs" value="margin-left: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="r-s" value="right: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="ml-s" value="margin-left: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="r-m" value="right: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="ml-m" value="margin-left: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="r-l" value="right: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="ml-l" value="margin-left: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="r-xl" value="right: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="ml-xl" value="margin-left: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="b-xs" value="bottom: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="ml-var" value="margin-left: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="b-s" value="bottom: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="top-xs" value="top: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="b-m" value="bottom: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="top-s" value="top: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="b-l" value="bottom: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="top-m" value="top: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="b-xl" value="bottom: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="top-l" value="top: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="l-xs" value="left: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="top-xl" value="top: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="l-s" value="left: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="top-var" value="top: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="l-m" value="left: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="right-xs" value="right: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="l-l" value="left: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="right-s" value="right: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="l-xl" value="left: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="right-m" value="right: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="gap-xs" value="grid-gap: var(--spacing-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+  <template name="right-l" value="right: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="gap-s" value="grid-gap: var(--spacing-s);" description="8px" toReformat="true" toShortenFQNames="true">
+  <template name="right-xl" value="right: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="gap-m" value="grid-gap: var(--spacing-m);" description="12px" toReformat="true" toShortenFQNames="true">
+  <template name="right-var" value="right: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="gap-l" value="grid-gap: var(--spacing-l);" description="16px" toReformat="true" toShortenFQNames="true">
+  <template name="bottom-xs" value="bottom: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="gap-xl" value="grid-gap: var(--spacing-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+  <template name="bottom-s" value="bottom: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bottom-m" value="bottom: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bottom-l" value="bottom: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bottom-xl" value="bottom: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bottom-var" value="bottom: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="left-xs" value="left: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="left-s" value="left: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="left-m" value="left: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="left-l" value="left: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="left-xl" value="left: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="left-var" value="left: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="gap-xs" value="grid-gap: var(--space-xs);" description="4px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="gap-s" value="grid-gap: var(--space-s);" description="8px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="gap-m" value="grid-gap: var(--space-m);" description="12px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="gap-l" value="grid-gap: var(--space-l);" description="16px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="gap-xl" value="grid-gap: var(--space-xl);" description="24px" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="gap-var" value="grid-gap: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bs-modal" value="box-shadow: var(--shadow-modal);" description="0px 5px 15px rgba(43, 51, 62, 0.5)" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bs-light" value="box-shadow: var(--shadow-light);" description="0px 4px 8px rgba(126, 143, 164, 0.15)" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bs-var" value="box-shadow: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="ts-modal" value="text-shadow: var(--shadow-modal);" description="0px 5px 15px rgba(43, 51, 62, 0.5)" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="ts-light" value="text-shadow: var(--shadow-light);" description="0px 4px 8px rgba(126, 143, 164, 0.15)" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="ts-var" value="text-shadow: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>

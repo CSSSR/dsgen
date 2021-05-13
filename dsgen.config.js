@@ -1,106 +1,56 @@
 module.exports = {
-  separator: '-',
   themes: {
     default: ':root',
     dark: 'html.theme_dark',
   },
-  variablesGroups: [
-    {
-      name: 'color',
-      description: 'Text colors',
-      withWildcard: true,
-      properties: {
-        color: 'color',
-      },
-      variables: {
-        primary: {
-          default: '#111',
-          dark: '#eee',
-        },
-        secondary: '#999',
-        link: 'deepskyblue',
-        'link-hover': 'blue',
-        success: 'lime',
-        warning: 'yellow',
-        error: 'red',
-      },
+  textColors: {
+    primary: {
+      default: '#111',
+      dark: '#eee',
     },
-    {
-      name: 'color-bg',
-      description: 'Background colors',
-      withWildcard: true,
-      properties: {
-        bgc: 'background-color',
-        fill: 'fill',
-        stroke: 'stroke',
-      },
-      variables: {
-        primary: {
-          default: '#fff',
-          dark: '#111',
-        },
-        secondary: '#eee',
-        success: 'lime',
-        warning: 'yellow',
-        error: 'red',
-      },
+    secondary: '#999',
+    link: 'deepskyblue',
+    'link-hover': 'blue',
+    success: 'lime',
+    warning: 'yellow',
+    error: 'red',
+  },
+  bgColors: {
+    primary: {
+      default: '#fff',
+      dark: '#111',
     },
-    {
-      name: 'font-size',
-      description: 'Font sizes',
-      properties: {
-        fz: 'font-size',
-      },
-      variables: {
-        xs: '8px',
-        s: '12px',
-        m: '16px',
-        l: '24px',
-        xl: '32px',
-      },
+    secondary: '#eee',
+    success: 'lime',
+    warning: 'yellow',
+    error: 'red',
+  },
+  fontSizes: {
+    xs: '8px',
+    s: '12px',
+    m: '16px',
+    l: '24px',
+    xl: '32px',
+  },
+  lineHeights: {
+    narrow: '1.1',
+    normal: '1.3',
+    wide: '1.5',
+  },
+  space: {
+    xs: '4px',
+    s: '8px',
+    m: '12px',
+    l: '16px',
+    xl: '24px',
+  },
+  shadows: {
+    modal: '0px 5px 15px rgba(43, 51, 62, 0.5)',
+    light: {
+      default: '0px 4px 8px rgba(126, 143, 164, 0.15)',
+      dark: '0px 5px 15px rgba(43, 51, 62, 0.2)',
     },
-    {
-      name: 'line-height',
-      description: 'Line heights',
-      properties: {
-        lh: 'line-height',
-      },
-      variables: {
-        narrow: '1.1',
-        normal: '1.3',
-        wide: '1.5',
-      },
-    },
-    {
-      name: 'spacing',
-      description: 'Spacing',
-      properties: {
-        p: 'padding',
-        pt: 'padding-top',
-        pr: 'padding-right',
-        pb: 'padding-bottom',
-        pl: 'padding-left',
-        m: 'margin',
-        mt: 'margin-top',
-        mr: 'margin-right',
-        mb: 'margin-bottom',
-        ml: 'margin-left',
-        t: 'top',
-        r: 'right',
-        b: 'bottom',
-        l: 'left',
-        gap: 'grid-gap',
-      },
-      variables: {
-        xs: '4px',
-        s: '8px',
-        m: '12px',
-        l: '16px',
-        xl: '24px',
-      },
-      allowedValues: ['-1px', '1px'],
-    },
-  ],
+  },
   mediaQueries: [
     {
       name: 'mobile',

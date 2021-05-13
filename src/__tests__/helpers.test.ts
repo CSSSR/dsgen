@@ -4,19 +4,10 @@ import { Config } from '../types'
 describe('dsgen', () => {
   describe('color', () => {
     const colorConfig: Config = {
-      variablesGroups: [
-        {
-          name: 'color',
-          withWildcard: true,
-          properties: {
-            col: 'color',
-          },
-          variables: {
-            primary: '#111',
-            secondary: '#222',
-          },
-        },
-      ],
+      textColors: {
+        primary: '#111',
+        secondary: '#222',
+      },
     }
 
     it('generates variables list', () => {
@@ -26,6 +17,7 @@ describe('dsgen', () => {
           selector: ':root',
           variablesGroups: [
             {
+              description: 'Text colors',
               variables: [
                 {
                   name: 'color-primary',
@@ -47,19 +39,19 @@ describe('dsgen', () => {
       const result = getSnippetsList(colorConfig)
       const expected: typeof result = [
         {
-          name: 'col-primary',
+          name: 'color-primary',
           property: 'color',
           variable: 'color-primary',
           description: '#111',
         },
         {
-          name: 'col-secondary',
+          name: 'color-secondary',
           property: 'color',
           variable: 'color-secondary',
           description: '#222',
         },
         {
-          name: 'col-var',
+          name: 'color-var',
           property: 'color',
           variable: null,
         },
@@ -70,20 +62,10 @@ describe('dsgen', () => {
 
   describe('spacing', () => {
     const spacingConfig: Config = {
-      variablesGroups: [
-        {
-          name: 'spacing',
-          description: 'Spacing',
-          properties: {
-            p: 'padding',
-            pb: 'padding-bottom',
-          },
-          variables: {
-            s: '8px',
-            m: '12px',
-          },
-        },
-      ],
+      space: {
+        s: '8px',
+        m: '12px',
+      },
     }
 
     it('generates variables list', () => {
@@ -96,11 +78,11 @@ describe('dsgen', () => {
               description: 'Spacing',
               variables: [
                 {
-                  name: 'spacing-s',
+                  name: 'space-s',
                   value: '8px',
                 },
                 {
-                  name: 'spacing-m',
+                  name: 'space-m',
                   value: '12px',
                 },
               ],
@@ -113,32 +95,42 @@ describe('dsgen', () => {
 
     it('generates snippets list', () => {
       const result = getSnippetsList(spacingConfig)
-      const expected: typeof result = [
+      const expected: typeof result = expect.arrayContaining([
         {
           name: 'p-s',
           property: 'padding',
-          variable: 'spacing-s',
+          variable: 'space-s',
           description: '8px',
         },
         {
           name: 'p-m',
           property: 'padding',
-          variable: 'spacing-m',
+          variable: 'space-m',
           description: '12px',
+        },
+        {
+          name: 'p-var',
+          property: 'padding',
+          variable: null,
         },
         {
           name: 'pb-s',
           property: 'padding-bottom',
-          variable: 'spacing-s',
+          variable: 'space-s',
           description: '8px',
         },
         {
           name: 'pb-m',
           property: 'padding-bottom',
-          variable: 'spacing-m',
+          variable: 'space-m',
           description: '12px',
         },
-      ]
+        {
+          name: 'pb-var',
+          property: 'padding-bottom',
+          variable: null,
+        },
+      ])
       expect(result).toEqual(expected)
     })
   })
@@ -149,26 +141,17 @@ describe('dsgen', () => {
         default: ':root',
         dark: 'html.theme_dark',
       },
-      variablesGroups: [
-        {
-          name: 'color',
-          withWildcard: true,
-          properties: {
-            col: 'color',
-          },
-          variables: {
-            primary: {
-              default: '#111',
-              dark: '#eee',
-            },
-            secondary: {
-              default: '#222',
-              dark: '#ddd',
-            },
-            link: '#888',
-          },
+      textColors: {
+        primary: {
+          default: '#111',
+          dark: '#eee',
         },
-      ],
+        secondary: {
+          default: '#222',
+          dark: '#ddd',
+        },
+        link: '#888',
+      },
     }
 
     it('generates variables list', () => {
@@ -178,6 +161,7 @@ describe('dsgen', () => {
           selector: ':root',
           variablesGroups: [
             {
+              description: 'Text colors',
               variables: [
                 {
                   name: 'color-primary',
@@ -199,6 +183,7 @@ describe('dsgen', () => {
           selector: 'html.theme_dark',
           variablesGroups: [
             {
+              description: 'Text colors',
               variables: [
                 {
                   name: 'color-primary',
@@ -220,25 +205,25 @@ describe('dsgen', () => {
       const result = getSnippetsList(themesConfig)
       const expected: typeof result = [
         {
-          name: 'col-primary',
+          name: 'color-primary',
           property: 'color',
           variable: 'color-primary',
           description: '#111',
         },
         {
-          name: 'col-secondary',
+          name: 'color-secondary',
           property: 'color',
           variable: 'color-secondary',
           description: '#222',
         },
         {
-          name: 'col-link',
+          name: 'color-link',
           property: 'color',
           variable: 'color-link',
           description: '#888',
         },
         {
-          name: 'col-var',
+          name: 'color-var',
           property: 'color',
           variable: null,
         },
@@ -249,7 +234,6 @@ describe('dsgen', () => {
 
   describe('media queries', () => {
     const mediaQueriesConfig: Config = {
-      variablesGroups: [],
       mediaQueries: [
         {
           name: 'mobile',

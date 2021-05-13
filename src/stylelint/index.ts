@@ -7,8 +7,9 @@ import type {
   SecondaryOptions,
 } from 'stylelint-declaration-strict-value/dist/defaults'
 
-import { getVariableName } from '../helpers'
-import { Config } from '../types'
+import { getDefaultVariableValue, getVariableName } from '../helpers'
+import { TOKEN_GROUPS_DETAILS } from '../tokenGroups'
+import { Config, TOKEN_GROUPS } from '../types'
 
 export const commonIgnoredValues: IgnoreValueList = [
   'initial',
@@ -26,26 +27,29 @@ export const commonIgnoredValues: IgnoreValueList = [
 export const getStrictValueRule = (
   config: Config
 ): [string[], SecondaryOptions] => {
-  const propertiesList = config.variablesGroups.flatMap((group) =>
-    Object.values(group.properties)
+  const propertiesList = TOKEN_GROUPS.flatMap((tokenGroup) =>
+    config[tokenGroup]
+      ? Object.values(TOKEN_GROUPS_DETAILS[tokenGroup].properties)
+      : []
   )
-  const propertiesWithIgnoredValues = config.variablesGroups.reduce<
-    Record<string, IgnoreValueList>
-  >((acc, { properties, allowedValues }) => {
-    if (allowedValues) {
-      Object.values(properties).forEach((property) => {
-        acc[property] = [...commonIgnoredValues, ...allowedValues]
-      })
-    }
-    return acc
-  }, {})
+
+  const allowedSpaceValues = config.linting?.allowedSpaceValues
+  const spaceIgnoredValues =
+    config.space && allowedSpaceValues
+      ? Object.values(TOKEN_GROUPS_DETAILS.space.properties).reduce<
+          Record<string, IgnoreValueList>
+        >((acc, spaceProperty) => {
+          acc[spaceProperty] = [...commonIgnoredValues, ...allowedSpaceValues]
+          return acc
+        }, {})
+      : {}
 
   return [
     propertiesList,
     {
       ignoreValues: {
         '': commonIgnoredValues,
-        ...propertiesWithIgnoredValues,
+        ...spaceIgnoredValues,
       },
       expandShorthand: true,
       autoFixFunc: getAutoFixFunc(config),
@@ -54,21 +58,24 @@ export const getStrictValueRule = (
   ]
 }
 
-const getAutoFixFunc = (config: Config): AutoFixFunc => (node) => {
+export const getAutoFixFunc = (config: Config): AutoFixFunc => (node) => {
   if (isDeclaration(node)) {
     const { value, prop } = node
 
-    const configGroup = config.variablesGroups.find((group) =>
-      Object.values(group.properties).includes(prop as keyof PropertiesHyphen)
+    const propTokenGroup = TOKEN_GROUPS.find((tokenGroup) =>
+      Object.values(TOKEN_GROUPS_DETAILS[tokenGroup].properties).includes(
+        prop as keyof PropertiesHyphen
+      )
     )
+    const variablesMap = propTokenGroup && config[propTokenGroup]
 
-    if (configGroup) {
-      const variables = Object.keys(configGroup.variables).filter(
-        (key) => configGroup.variables[key] === value
+    if (propTokenGroup && variablesMap) {
+      const variables = Object.entries(variablesMap).filter(
+        ([_varName, varValue]) => getDefaultVariableValue(varValue) === value
       )
 
       if (variables.length === 1) {
-        return `var(--${getVariableName(variables[0], configGroup.name)})`
+        return `var(--${getVariableName(propTokenGroup, variables[0][0])})`
       }
     }
 
