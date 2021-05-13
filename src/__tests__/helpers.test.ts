@@ -234,29 +234,21 @@ describe('dsgen', () => {
 
   describe('media queries', () => {
     const mediaQueriesConfig: Config = {
-      mediaQueries: [
-        {
-          name: 'mobile',
-          snippet: '@mob',
-          value: '(max-width: 640px)',
-        },
-        {
-          name: 'tablet',
-          snippet: '@tab',
-          value: '(max-width: 1024px)',
-        },
-      ],
+      mediaQueries: {
+        mobile: '(max-width: 640px)',
+        tablet: '(max-width: 1024px)',
+      },
     }
 
     it('generates snippets list', () => {
       const result = getSnippetsList(mediaQueriesConfig)
       const expected: typeof result = [
         {
-          name: '@mob',
+          name: '@mobile',
           mediaQueryVariable: 'mobile',
         },
         {
-          name: '@tab',
+          name: '@tablet',
           mediaQueryVariable: 'tablet',
         },
       ]

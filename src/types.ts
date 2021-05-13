@@ -23,7 +23,7 @@ export type Config = {
     allowedSpaceValues?: IgnoreValueList
   }
   themes?: Record<ThemeName, string>
-  mediaQueries?: MediaQuery[]
+  mediaQueries?: MediaQueries
 } & {
   [key in TokenGroup]?: VariablesMap
 }
@@ -47,15 +47,11 @@ export type Variable = {
   value: string
 }
 
-export type MediaQuery = {
-  name: string
-  snippet: string
-  value: string
-}
+export type MediaQueries = Record<string, string>
 
 export type VariablesFormatter = (
   themes: Theme[],
-  mediaQueries: MediaQuery[]
+  mediaQueries?: MediaQueries
 ) => string
 
 export type Snippet =

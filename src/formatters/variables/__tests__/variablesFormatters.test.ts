@@ -1,4 +1,4 @@
-import { MediaQuery, Theme, VariablesGroup } from '../../../types'
+import { MediaQueries, Theme } from '../../../types'
 import { variablesFormatterCSS } from '../CSS'
 import { testOnlyVariablesCSS, testVariablesCSS } from './testVariablesCSS'
 
@@ -75,29 +75,17 @@ describe('variablesFormatters', () => {
     },
   ]
 
-  const mediaQueries: MediaQuery[] = [
-    {
-      name: 'mobile',
-      snippet: '@mob',
-      value: '(max-width: 640px)',
-    },
-    {
-      name: 'tablet',
-      snippet: '@tab',
-      value: '(max-width: 1024px)',
-    },
-    {
-      name: 'desktop',
-      snippet: '@desk',
-      value: '(min-width: 1025px)',
-    },
-  ]
+  const mediaQueries: MediaQueries = {
+    mobile: '(max-width: 640px)',
+    tablet: '(max-width: 1024px)',
+    desktop: '(min-width: 1025px)',
+  }
 
   it('formats CSS variables', () => {
     expect(variablesFormatterCSS(themes, mediaQueries)).toBe(testVariablesCSS)
   })
 
   it('formats CSS variables without media queries', () => {
-    expect(variablesFormatterCSS(themes, [])).toBe(testOnlyVariablesCSS)
+    expect(variablesFormatterCSS(themes)).toBe(testOnlyVariablesCSS)
   })
 })

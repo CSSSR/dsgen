@@ -1,19 +1,19 @@
 <templateSet group="dsgen">
-  <template name="@mob" value="@media (--mobile) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
+  <template name="@mobile" value="@media (--mobile) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS" value="true" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
     </context>
   </template>
-  <template name="@tab" value="@media (--tablet) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
+  <template name="@tablet" value="@media (--tablet) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS" value="true" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
     </context>
   </template>
-  <template name="@desk" value="@media (--desktop) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
+  <template name="@desktop" value="@media (--desktop) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS" value="true" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />

@@ -65,11 +65,12 @@ const getThemeVariables = (
     .filter(isNotNil)
 
 export const getSnippetsList = (config: Config): Snippet[] => {
-  const mediaQuerySnippets: Snippet[] =
-    config.mediaQueries?.map((mediaQuery) => ({
-      name: mediaQuery.snippet,
-      mediaQueryVariable: mediaQuery.name,
-    })) || []
+  const mediaQuerySnippets: Snippet[] = config.mediaQueries
+    ? Object.entries(config.mediaQueries).map(([mqName]) => ({
+        name: `@${mqName}`,
+        mediaQueryVariable: mqName,
+      }))
+    : []
 
   const variablesSnippets: Snippet[] = TOKEN_GROUPS.flatMap((tokenGroup) => {
     return Object.entries(TOKEN_GROUPS_DETAILS[tokenGroup].properties).flatMap(

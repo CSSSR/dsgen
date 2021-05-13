@@ -21,7 +21,7 @@ const main = async () => {
 
 const writeVariables = async () => {
   const themes = getThemes(config)
-  const variablesText = styleFormatters.CSS(themes, config.mediaQueries || [])
+  const variablesText = styleFormatters.CSS(themes, config.mediaQueries)
 
   await fs.writeFile(
     config.output?.CSS || './design-system.css',

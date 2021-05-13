@@ -51,21 +51,9 @@ module.exports = {
       dark: '0px 5px 15px rgba(43, 51, 62, 0.2)',
     },
   },
-  mediaQueries: [
-    {
-      name: 'mobile',
-      snippet: '@mob',
-      value: '(max-width: 640px)',
-    },
-    {
-      name: 'tablet',
-      snippet: '@tab',
-      value: '(max-width: 1024px)',
-    },
-    {
-      name: 'desktop',
-      snippet: '@desk',
-      value: '(min-width: 1025px)',
-    },
-  ],
+  mediaQueries: {
+    mobile: '(max-width: 640px)',
+    tablet: '(max-width: 1024px)',
+    desktop: '(min-width: 1025px)',
+  },
 }

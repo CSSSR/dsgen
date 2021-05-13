@@ -1,25 +1,25 @@
 {
-  "@mob": {
+  "@mobile": {
     "scope": "css,postcss",
-    "prefix": "@mob",
+    "prefix": "@mobile",
     "body": [
       "@media (--mobile) {",
       "\t$0",
       "}"
     ]
   },
-  "@tab": {
+  "@tablet": {
     "scope": "css,postcss",
-    "prefix": "@tab",
+    "prefix": "@tablet",
     "body": [
       "@media (--tablet) {",
       "\t$0",
       "}"
     ]
   },
-  "@desk": {
+  "@desktop": {
     "scope": "css,postcss",
-    "prefix": "@desk",
+    "prefix": "@desktop",
     "body": [
       "@media (--desktop) {",
       "\t$0",

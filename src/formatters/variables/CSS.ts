@@ -1,5 +1,5 @@
 import {
-  MediaQuery,
+  MediaQueries,
   Variable,
   VariablesFormatter,
   VariablesGroup,
@@ -9,7 +9,7 @@ export const variablesFormatterCSS: VariablesFormatter = (
   themes,
   mediaQueries
 ) => {
-  const mediaQueriesText = formatMediaQueries(mediaQueries)
+  const mediaQueriesText = formatMediaQueries(mediaQueries ?? {})
   const themesText = themes
     .map((theme) => formatTheme(theme.selector, theme.variablesGroups))
     .join('\n')
@@ -33,8 +33,8 @@ const formatGroup = (group: VariablesGroup): string =>
 const formatVariable = ({ name, value }: Variable): string =>
   `--${name}: ${value};`
 
-const formatMediaQueries = (mediaQueries: MediaQuery[]): string => {
-  return mediaQueries
-    .map(({ name, value }) => `@custom-media --${name} ${value};`)
+const formatMediaQueries = (mediaQueries: MediaQueries): string => {
+  return Object.entries(mediaQueries)
+    .map(([name, value]) => `@custom-media --${name} ${value};`)
     .join('\n')
 }
