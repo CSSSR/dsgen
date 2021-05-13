@@ -1,12 +1,14 @@
+import { PropertiesHyphen } from 'csstype'
+import { Node } from 'postcss'
+import Declaration from 'postcss/lib/declaration'
 import type {
   AutoFixFunc,
   IgnoreValueList,
   SecondaryOptions,
 } from 'stylelint-declaration-strict-value/dist/defaults'
+
+import { getVariableName } from '../helpers'
 import { Config } from '../types'
-import Declaration from 'postcss/lib/declaration'
-import { Node } from 'postcss'
-import { PropertiesHyphen } from 'csstype'
 
 export const commonIgnoredValues: IgnoreValueList = [
   'initial',
@@ -66,7 +68,7 @@ const getAutoFixFunc = (config: Config): AutoFixFunc => (node) => {
       )
 
       if (variables.length === 1) {
-        return `var(--${configGroup.name}${config.separator}${variables[0]})`
+        return `var(--${getVariableName(variables[0], configGroup.name)})`
       }
     }
 

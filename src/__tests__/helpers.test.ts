@@ -47,19 +47,19 @@ describe('dsgen', () => {
       const result = getSnippetsList(colorConfig)
       const expected: typeof result = [
         {
-          name: 'colprimary',
+          name: 'col-primary',
           property: 'color',
           variable: 'color-primary',
           description: '#111',
         },
         {
-          name: 'colsecondary',
+          name: 'col-secondary',
           property: 'color',
           variable: 'color-secondary',
           description: '#222',
         },
         {
-          name: 'colvar',
+          name: 'col-var',
           property: 'color',
           variable: null,
         },
@@ -70,7 +70,6 @@ describe('dsgen', () => {
 
   describe('spacing', () => {
     const spacingConfig: Config = {
-      separator: '-',
       variablesGroups: [
         {
           name: 'spacing',
@@ -221,25 +220,25 @@ describe('dsgen', () => {
       const result = getSnippetsList(themesConfig)
       const expected: typeof result = [
         {
-          name: 'colprimary',
+          name: 'col-primary',
           property: 'color',
           variable: 'color-primary',
           description: '#111',
         },
         {
-          name: 'colsecondary',
+          name: 'col-secondary',
           property: 'color',
           variable: 'color-secondary',
           description: '#222',
         },
         {
-          name: 'collink',
+          name: 'col-link',
           property: 'color',
           variable: 'color-link',
           description: '#888',
         },
         {
-          name: 'colvar',
+          name: 'col-var',
           property: 'color',
           variable: null,
         },

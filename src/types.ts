@@ -8,7 +8,9 @@ export type Config = {
       [key in SnippetsTarget]?: string
     }
   }
-  separator?: string
+  linting?: {
+    severity?: 'warning' | 'error'
+  }
   themes?: Record<ThemeName, string>
   variablesGroups: Array<{
     name: string
@@ -19,9 +21,6 @@ export type Config = {
     allowedValues?: IgnoreValueList
   }>
   mediaQueries?: MediaQuery[]
-  linting?: {
-    severity?: 'warning' | 'error'
-  }
 }
 
 type PropertySnippet = string

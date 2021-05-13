@@ -12,7 +12,6 @@ import {
   VariablesGroup,
 } from './types'
 
-const DEFAULT_SEPARATOR = ''
 const DEFAULT_WILDCARD_SUFFIX = 'var'
 
 export const getThemes = (config: Config): Theme[] =>
@@ -71,11 +70,7 @@ export const getSnippetsList = (config: Config): Snippet[] => {
         Object.entries(group.variables)
           .map(
             ([varName, varValue]): Snippet => {
-              const snippetText = getSnippetText(
-                prefix,
-                varName,
-                config.separator
-              )
+              const snippetText = getSnippetText(prefix, varName)
               return {
                 name: snippetText,
                 property,
@@ -90,11 +85,7 @@ export const getSnippetsList = (config: Config): Snippet[] => {
           .concat(
             group.withWildcard
               ? {
-                  name: getSnippetText(
-                    prefix,
-                    DEFAULT_WILDCARD_SUFFIX,
-                    config.separator
-                  ),
+                  name: getSnippetText(prefix, DEFAULT_WILDCARD_SUFFIX),
                   property,
                   variable: null,
                 }
@@ -107,13 +98,10 @@ export const getSnippetsList = (config: Config): Snippet[] => {
   return [...mediaQuerySnippets, ...variablesSnippets]
 }
 
-const getSnippetText = (
-  prefix: string,
-  suffix: string,
-  separator: string = DEFAULT_SEPARATOR
-): string => [prefix, suffix].join(separator)
+const getSnippetText = (prefix: string, suffix: string): string =>
+  [prefix, suffix].join('-')
 
-const getVariableName = (variableName: string, group: string) =>
+export const getVariableName = (variableName: string, group: string) =>
   `${group}-${variableName}`
 
 export const styleFormatters: Record<'CSS', VariablesFormatter> = {
