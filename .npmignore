@@ -8,7 +8,7 @@ yarn.lock
 yarn-error.log
 
 # Sourcecode
-/design-system.css
+/design-tokens.css
 /snippets
 /src
 

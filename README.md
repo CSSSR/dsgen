@@ -32,11 +32,11 @@ All these parts are connected via special [configuration file](#configuration-fi
    - Set CSS file path
 1. Add generation script to `package.json`: `"dsgen": "dsgen"`
 1. Run generation script: `yarn dsgen`, it will generate:
-   - CSS file with CSS variables and custom media variables (see example [design-system.css](design-system.css) here)
+   - CSS file with CSS variables and custom media variables (see example [design-tokens.css](design-tokens.css) here)
    - Snippets for IDEs (see examples in [snippets](snippets) directory here)
 1. Import generated CSS file inside your `index.css`:
    ```css
-   @import 'design-system.css';
+   @import 'design-tokens.css';
    ```
 1. Add snippets
 1. [Configure `stylelint`](#configuring-stylelint)

@@ -24,7 +24,7 @@ const writeVariables = async () => {
   const variablesText = styleFormatters.CSS(themes, config.mediaQueries)
 
   await fs.writeFile(
-    config.output?.CSS || './design-system.css',
+    config.output?.CSS || './design-tokens.css',
     variablesText,
     (err) => err && console.error(err)
   )
