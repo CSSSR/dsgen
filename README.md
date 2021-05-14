@@ -1,6 +1,6 @@
 # 🚧 This project is under heavy development 🚧
 
-The goal of this project is to ease creation and usage of a basic CSS design system. Our aim to bring Tailwind's design system benefits to a regular CSS workflow.
+The goal of this project is to ease creation and usage of a basic CSS design system (design tokens). Our aim is to bring Tailwind's design system benefits to a regular CSS workflow.
 
 As a result you will use a configurable set of CSS variables throughout your styles while your IDE and linter will assist you with snippets and auto fixing.
 
@@ -26,8 +26,7 @@ All these parts are connected via special [configuration file](#configuration-fi
 1. Add this project as dev dependency
 1. Copy [`dsgen.config.js`](dsgen.config.js) to the root of your project
 1. Make changes to your `dsgen.config.js`:
-   - Set name of your project
-   - Adjust values and properties list to your project's needs
+   - Adjust design tokens (colors, fonts, etc.)
    - Adjust media queries list
    - Set CSS file path
 1. Add generation script to `package.json`: `"dsgen": "dsgen"`
@@ -38,67 +37,14 @@ All these parts are connected via special [configuration file](#configuration-fi
    ```css
    @import 'design-tokens.css';
    ```
-1. Add snippets
+1. [Add snippets to your IDE](#ide-snippets)
 1. [Configure `stylelint`](#configuring-stylelint)
 
 ## Configuration file
 
-Here's an example of our configuration file:
-
-```js
-// dsgen.config.js
-module.exports = {
-  separator: '-',
-  variablesGroups: [
-    {
-      name: 'color',
-      description: 'Text colors',
-      withWildcard: true,
-      properties: {
-        color: 'color',
-      },
-      variables: {
-        primary: '#111',
-        secondary: '#999',
-      },
-    },
-    {
-      name: 'font-size',
-      description: 'Font sizes',
-      properties: {
-        fz: 'font-size',
-      },
-      variables: {
-        s: '12px',
-        m: '16px',
-        l: '24px',
-      },
-    },
-  ],
-  mediaQueries: [
-    {
-      name: 'mobile',
-      snippet: '@mob',
-      value: '(max-width: 640px)',
-    },
-    {
-      name: 'tablet',
-      snippet: '@tab',
-      value: '(max-width: 1024px)',
-    },
-  ],
-}
-```
-
-This example contains:
-
-- list of variables for colors
-- list of variables for font sizes
-- list of media queries
-
-All these variables and media queries will be converted to [CSS file](#style-variables) and [IDE snippets](#ide-snippets).
-
 You can see full example in [`dsgen.config.js`](dsgen.config.js) file in this repo.
+
+Tokens from this config will be converted to [CSS file](#style-variables) and [IDE snippets](#ide-snippets).
 
 ### Theming support
 
@@ -113,7 +59,7 @@ To create multiple themes:
   ```
 * Now you can add multiple values for each variable:
   ```
-  variables: {
+  textColors: {
     primary: {
       default: '#111',
       dark: '#eee',
@@ -123,25 +69,9 @@ To create multiple themes:
 
 ## Style variables
 
-CSS variables generated from config are exported to a separate file. It is recommended to not change this file manually as it could be rewritten after config update.
+CSS variables generated from config are exported to a separate file. Don't change this file manually as it will be fully rewritten after config update.
 
-E.g. for a config above these variables will be generated:
-
-```css
-@custom-media --mobile (max-width: 640px);
-@custom-media --tablet (max-width: 1024px);
-
-:root {
-  /* Text colors */
-  --color-primary: #111;
-  --color-secondary: #999;
-
-  /* Font sizes */
-  --font-size-s: 12px;
-  --font-size-m: 16px;
-  --font-size-l: 24px;
-}
-```
+See example CSS file in [design-tokens.css](design-tokens.css).
 
 ### z-indices
 
@@ -151,15 +81,12 @@ For z-indices we recommend using [`postcss-easy-z`](https://github.com/CSSSR/pos
 
 IDE snippets are also generated from config file.
 
-E.g. for a config above these snippets will be generated:
+Some examples:
 ```
-@mob            -> @media (--mobile) {}
-@tab            -> @media (--tablet) {}
+@mobile         -> @media (--mobile) {}
 color-primary   -> color: var(--color-primary);
-color-secondary -> color: var(--color-secondary);
+bgc-secondary   -> background-color: var(--color-bg-secondary);
 fz-s            -> font-size: var(--font-size-s);
-fz-m            -> font-size: var(--font-size-m);
-fz-l            -> font-size: var(--font-size-l);
 ```
 
 ### WebStorm and other IntelliJ IDEs
@@ -208,20 +135,11 @@ E.g. with this config:
 ```js
 // dsgen.config.js
 module.exports = {
-  variablesGroups: [
-    {
-      name: 'font-size',
-      description: 'Font sizes',
-      properties: {
-        fz: 'font-size',
-      },
-      variables: {
-        s: '12px',
-        m: '16px',
-        l: '24px',
-      },
-    },
-  ],
+  fontSizes: {
+    s: '12px',
+    m: '16px',
+    l: '24px',
+  },
 }
 ```
 

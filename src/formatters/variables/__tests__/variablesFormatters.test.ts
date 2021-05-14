@@ -1,6 +1,9 @@
 import { MediaQueries, Theme } from '../../../types'
 import { variablesFormatterCSS } from '../CSS'
-import { testOnlyVariablesCSS, testVariablesCSS } from './testVariablesCSS'
+import {
+  testOnlyVariablesCSS,
+  testVariablesAndMediaQueriesCSS,
+} from './testVariablesAndMediaQueriesCSS'
 
 describe('variablesFormatters', () => {
   const themes: Theme[] = [
@@ -82,7 +85,9 @@ describe('variablesFormatters', () => {
   }
 
   it('formats CSS variables', () => {
-    expect(variablesFormatterCSS(themes, mediaQueries)).toBe(testVariablesCSS)
+    expect(variablesFormatterCSS(themes, mediaQueries)).toBe(
+      testVariablesAndMediaQueriesCSS
+    )
   })
 
   it('formats CSS variables without media queries', () => {
