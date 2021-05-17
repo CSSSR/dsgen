@@ -70,7 +70,7 @@ describe('getAutoFixFunc', () => {
       value: '#111',
     } as Declaration
     const result = autoFixFunc(colorDecl, {} as any, {} as any, {})
-    expect(result).toBe('var(--color-primary)')
+    expect(result).toBe('var(--color-text-primary)')
   })
 
   it('fixes color if it is present in config with first theme', () => {
@@ -88,7 +88,7 @@ describe('getAutoFixFunc', () => {
       value: '#222',
     } as Declaration
     const result = autoFixFunc(colorDecl, {} as any, {} as any, {})
-    expect(result).toBe('var(--color-secondary)')
+    expect(result).toBe('var(--color-text-secondary)')
   })
 
   it("doesn't fix color if it is present in config but not in the first theme", () => {

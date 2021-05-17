@@ -20,11 +20,11 @@ describe('dsgen', () => {
               description: 'Text colors',
               variables: [
                 {
-                  name: 'color-primary',
+                  name: 'color-text-primary',
                   value: '#111',
                 },
                 {
-                  name: 'color-secondary',
+                  name: 'color-text-secondary',
                   value: '#222',
                 },
               ],
@@ -41,13 +41,13 @@ describe('dsgen', () => {
         {
           name: 'color-primary',
           property: 'color',
-          variable: 'color-primary',
+          variable: 'color-text-primary',
           description: '#111',
         },
         {
           name: 'color-secondary',
           property: 'color',
-          variable: 'color-secondary',
+          variable: 'color-text-secondary',
           description: '#222',
         },
         {
@@ -164,15 +164,15 @@ describe('dsgen', () => {
               description: 'Text colors',
               variables: [
                 {
-                  name: 'color-primary',
+                  name: 'color-text-primary',
                   value: '#111',
                 },
                 {
-                  name: 'color-secondary',
+                  name: 'color-text-secondary',
                   value: '#222',
                 },
                 {
-                  name: 'color-link',
+                  name: 'color-text-link',
                   value: '#888',
                 },
               ],
@@ -186,11 +186,11 @@ describe('dsgen', () => {
               description: 'Text colors',
               variables: [
                 {
-                  name: 'color-primary',
+                  name: 'color-text-primary',
                   value: '#eee',
                 },
                 {
-                  name: 'color-secondary',
+                  name: 'color-text-secondary',
                   value: '#ddd',
                 },
               ],
@@ -207,19 +207,19 @@ describe('dsgen', () => {
         {
           name: 'color-primary',
           property: 'color',
-          variable: 'color-primary',
+          variable: 'color-text-primary',
           description: '#111',
         },
         {
           name: 'color-secondary',
           property: 'color',
-          variable: 'color-secondary',
+          variable: 'color-text-secondary',
           description: '#222',
         },
         {
           name: 'color-link',
           property: 'color',
-          variable: 'color-link',
+          variable: 'color-text-link',
           description: '#888',
         },
         {
