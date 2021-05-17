@@ -68,4 +68,4 @@ export type Snippet =
 
 export type SnippetsFormatter = (name: string, snippets: Snippet[]) => string
 
-export type SnippetsTarget = 'IntelliJ' | 'VSCode'
+export type SnippetsTarget = 'JetBrains' | 'VSCode'

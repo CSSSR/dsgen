@@ -29,43 +29,43 @@
   "color-primary": {
     "scope": "css,postcss",
     "prefix": "color-primary",
-    "body": "color: var(--color-primary);",
+    "body": "color: var(--color-text-primary);",
     "description": "#111"
   },
   "color-secondary": {
     "scope": "css,postcss",
     "prefix": "color-secondary",
-    "body": "color: var(--color-secondary);",
+    "body": "color: var(--color-text-secondary);",
     "description": "#999"
   },
   "color-link": {
     "scope": "css,postcss",
     "prefix": "color-link",
-    "body": "color: var(--color-link);",
+    "body": "color: var(--color-text-link);",
     "description": "deepskyblue"
   },
   "color-link-hover": {
     "scope": "css,postcss",
     "prefix": "color-link-hover",
-    "body": "color: var(--color-link-hover);",
+    "body": "color: var(--color-text-link-hover);",
     "description": "blue"
   },
   "color-success": {
     "scope": "css,postcss",
     "prefix": "color-success",
-    "body": "color: var(--color-success);",
+    "body": "color: var(--color-text-success);",
     "description": "lime"
   },
   "color-warning": {
     "scope": "css,postcss",
     "prefix": "color-warning",
-    "body": "color: var(--color-warning);",
+    "body": "color: var(--color-text-warning);",
     "description": "yellow"
   },
   "color-error": {
     "scope": "css,postcss",
     "prefix": "color-error",
-    "body": "color: var(--color-error);",
+    "body": "color: var(--color-text-error);",
     "description": "red"
   },
   "color-var": {

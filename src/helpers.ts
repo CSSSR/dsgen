@@ -1,4 +1,4 @@
-import { snippetsFormatterIntelliJ } from './formatters/snippets/IntelliJ'
+import { snippetsFormatterJetBrains } from './formatters/snippets/JetBrains'
 import { snippetsFormatterVSCode } from './formatters/snippets/VSCode'
 import { variablesFormatterCSS } from './formatters/variables/CSS'
 import { TOKEN_GROUPS_DETAILS } from './tokenGroups'
@@ -113,7 +113,7 @@ export const styleFormatters: Record<'CSS', VariablesFormatter> = {
 }
 
 export const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
-  IntelliJ: snippetsFormatterIntelliJ,
+  JetBrains: snippetsFormatterJetBrains,
   VSCode: snippetsFormatterVSCode,
 }
 

@@ -88,9 +88,9 @@ bgc-secondary   -> background-color: var(--color-bg-secondary);
 fz-s            -> font-size: var(--font-size-s);
 ```
 
-### WebStorm and other IntelliJ IDEs
+### WebStorm and other JetBrains IDEs
 
-IntelliJ IDEs doesn't support project snippets, so you'll need to add snippets globally. Place snippets file inside `jba_config/templates` in the [IDE configuration directory](https://www.jetbrains.com/help/webstorm/tuning-the-ide.html#config-directory).
+JetBrains IDEs don't support project snippets, so you'll need to add snippets globally. Place snippets file inside `jba_config/templates` in the [IDE configuration directory](https://www.jetbrains.com/help/webstorm/tuning-the-ide.html#config-directory).
 
 E.g. on Mac OS: `~/Library/Application\ Support/JetBrains/WebStorm2021.1/jba_config/templates/`
 
@@ -99,7 +99,7 @@ Then restart IDE, and you'll see snippets group available in Preferences:
 
 You'll need to manually enable/disable snippets groups if you are working on multiple projects with different design system configs.
 
-To make this process easier please vote for [per-project templates in IntelliJ IDEs](https://youtrack.jetbrains.com/issue/IDEA-242159).
+To make this process easier please vote for [per-project templates in JetBrains IDEs](https://youtrack.jetbrains.com/issue/IDEA-242159).
 
 ### Visual Studio Code
 

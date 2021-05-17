@@ -1,6 +1,6 @@
 import { Snippet, SnippetsFormatter } from '../../types'
 
-export const snippetsFormatterIntelliJ: SnippetsFormatter = (
+export const snippetsFormatterJetBrains: SnippetsFormatter = (
   name,
   snippets
 ) => {

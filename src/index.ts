@@ -15,7 +15,7 @@ const projectName = require(path.resolve('./package.json')).name
 
 const main = async () => {
   await writeVariables()
-  await writeSnippets('IntelliJ')
+  await writeSnippets('JetBrains')
   await writeSnippets('VSCode')
 }
 
@@ -41,12 +41,12 @@ const writeSnippets = async (target: SnippetsTarget) => {
 }
 
 const snippetFileExtensionByTarget: Record<SnippetsTarget, string> = {
-  IntelliJ: 'xml',
+  JetBrains: 'xml',
   VSCode: 'code-snippets',
 }
 
 const defaultSnippetFolderByTarget: Record<SnippetsTarget, string> = {
-  IntelliJ: 'snippets/IntelliJ',
+  JetBrains: 'snippets/JetBrains',
   VSCode: '.vscode',
 }
 

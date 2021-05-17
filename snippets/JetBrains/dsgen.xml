@@ -20,37 +20,37 @@
       <option name="CSS_PROPERTY_VALUE" value="false" />
     </context>
   </template>
-  <template name="color-primary" value="color: var(--color-primary);" description="#111" toReformat="true" toShortenFQNames="true">
+  <template name="color-primary" value="color: var(--color-text-primary);" description="#111" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-secondary" value="color: var(--color-secondary);" description="#999" toReformat="true" toShortenFQNames="true">
+  <template name="color-secondary" value="color: var(--color-text-secondary);" description="#999" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-link" value="color: var(--color-link);" description="deepskyblue" toReformat="true" toShortenFQNames="true">
+  <template name="color-link" value="color: var(--color-text-link);" description="deepskyblue" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-link-hover" value="color: var(--color-link-hover);" description="blue" toReformat="true" toShortenFQNames="true">
+  <template name="color-link-hover" value="color: var(--color-text-link-hover);" description="blue" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-success" value="color: var(--color-success);" description="lime" toReformat="true" toShortenFQNames="true">
+  <template name="color-success" value="color: var(--color-text-success);" description="lime" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-warning" value="color: var(--color-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+  <template name="color-warning" value="color: var(--color-text-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-error" value="color: var(--color-error);" description="red" toReformat="true" toShortenFQNames="true">
+  <template name="color-error" value="color: var(--color-text-error);" description="red" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>

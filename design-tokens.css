@@ -6,13 +6,13 @@
 
 :root {
   /* Text colors */
-  --color-primary: #111;
-  --color-secondary: #999;
-  --color-link: deepskyblue;
-  --color-link-hover: blue;
-  --color-success: lime;
-  --color-warning: yellow;
-  --color-error: red;
+  --color-text-primary: #111;
+  --color-text-secondary: #999;
+  --color-text-link: deepskyblue;
+  --color-text-link-hover: blue;
+  --color-text-success: lime;
+  --color-text-warning: yellow;
+  --color-text-error: red;
 
   /* Background colors */
   --color-bg-primary: #fff;
@@ -47,7 +47,7 @@
 
 html.theme_dark {
   /* Text colors */
-  --color-primary: #eee;
+  --color-text-primary: #eee;
 
   /* Background colors */
   --color-bg-primary: #111;

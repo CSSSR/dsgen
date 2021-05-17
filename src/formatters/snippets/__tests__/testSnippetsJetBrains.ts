@@ -1,4 +1,4 @@
-export const testSnippetsIntelliJ = `
+export const testSnippetsJetBrains = `
 <templateSet group="MyConfig">
   <template name="@mob" value="@media (--mobile) {&#10;$END$&#10;}" description="" toReformat="true" toShortenFQNames="true">
     <context>

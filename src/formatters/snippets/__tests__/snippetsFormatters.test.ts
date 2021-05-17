@@ -1,6 +1,6 @@
-import { testSnippetsIntelliJ } from './testSnippetsIntelliJ'
+import { testSnippetsJetBrains } from './testSnippetsJetBrains'
 import { testSnippetsVSCode } from './testSnippetsVSCode'
-import { snippetsFormatterIntelliJ } from '../IntelliJ'
+import { snippetsFormatterJetBrains } from '../JetBrains'
 import { snippetsFormatterVSCode } from '../VSCode'
 import { Snippet } from '../../../types'
 
@@ -33,9 +33,9 @@ describe('snippetsFormatters', () => {
     },
   ]
 
-  it('generates snippets for IntelliJ', () => {
-    expect(snippetsFormatterIntelliJ('MyConfig', snippets)).toBe(
-      testSnippetsIntelliJ
+  it('generates snippets for JetBrains', () => {
+    expect(snippetsFormatterJetBrains('MyConfig', snippets)).toBe(
+      testSnippetsJetBrains
     )
   })
 
