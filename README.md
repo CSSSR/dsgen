@@ -29,8 +29,7 @@ All these parts are connected via special [configuration file](#configuration-fi
    - Adjust design tokens (colors, fonts, etc.)
    - Adjust media queries list
    - Set CSS file path
-1. Add generation script to `package.json`: `"dsgen": "dsgen"`
-1. Run generation script: `yarn dsgen`, it will generate:
+1. Run generation script: `npx dsgen`, it will generate:
    - CSS file with CSS variables and custom media variables (see example [design-tokens.css](design-tokens.css) here)
    - Snippets for IDEs (see examples in [snippets](snippets) directory here)
 1. Import generated CSS file inside your `index.css`:

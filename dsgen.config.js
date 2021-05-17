@@ -1,3 +1,4 @@
+// Run `npx dsgen` after updating this file
 module.exports = {
   themes: {
     default: ':root',
