@@ -10,7 +10,7 @@ export const TOKEN_GROUPS_DETAILS: Record<
   }
 > = {
   textColors: {
-    variablePrefix: 'color',
+    variablePrefix: 'color-text',
     description: 'Text colors',
     properties: { color: 'color' },
   },
