@@ -1,6 +1,6 @@
 {
   "name": "dsgen",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Create your own design system using CSS variables",
   "keywords": [
     "css",
