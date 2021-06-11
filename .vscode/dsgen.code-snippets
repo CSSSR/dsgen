@@ -30,13 +30,13 @@
     "scope": "css,postcss",
     "prefix": "color-primary",
     "body": "color: var(--color-text-primary);",
-    "description": "#111"
+    "description": "#111 - Primary color"
   },
   "color-secondary": {
     "scope": "css,postcss",
     "prefix": "color-secondary",
     "body": "color: var(--color-text-secondary);",
-    "description": "#999"
+    "description": "#999 - Secondary color"
   },
   "color-link": {
     "scope": "css,postcss",

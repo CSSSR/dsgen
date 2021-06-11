@@ -5,7 +5,7 @@ describe('dsgen', () => {
   describe('color', () => {
     const colorConfig: Config = {
       textColors: {
-        primary: '#111',
+        primary: ['#111', 'Primary color'],
         secondary: '#222',
       },
     }
@@ -22,6 +22,7 @@ describe('dsgen', () => {
                 {
                   name: 'color-text-primary',
                   value: '#111',
+                  description: 'Primary color',
                 },
                 {
                   name: 'color-text-secondary',
@@ -42,7 +43,7 @@ describe('dsgen', () => {
           name: 'color-primary',
           property: 'color',
           variable: 'color-text-primary',
-          description: '#111',
+          description: '#111 - Primary color',
         },
         {
           name: 'color-secondary',
@@ -142,10 +143,13 @@ describe('dsgen', () => {
         dark: 'html.theme_dark',
       },
       textColors: {
-        primary: {
-          default: '#111',
-          dark: '#eee',
-        },
+        primary: [
+          {
+            default: '#111',
+            dark: '#eee',
+          },
+          'Primary color',
+        ],
         secondary: {
           default: '#222',
           dark: '#ddd',
@@ -166,6 +170,7 @@ describe('dsgen', () => {
                 {
                   name: 'color-text-primary',
                   value: '#111',
+                  description: 'Primary color',
                 },
                 {
                   name: 'color-text-secondary',
@@ -208,7 +213,7 @@ describe('dsgen', () => {
           name: 'color-primary',
           property: 'color',
           variable: 'color-text-primary',
-          description: '#111',
+          description: '#111 - Primary color',
         },
         {
           name: 'color-secondary',

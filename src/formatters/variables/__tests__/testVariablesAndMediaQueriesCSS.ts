@@ -1,7 +1,7 @@
 const variables = `
 :root {
   /* Text colors */
-  --color-text-primary: #111;
+  --color-text-primary: #111; /* Primary color */
   --color-text-secondary: #222;
 
   /* Font sizes */

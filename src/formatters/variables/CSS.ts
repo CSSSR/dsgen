@@ -1,3 +1,4 @@
+import { isNotNil } from '../../helpers'
 import {
   MediaQueries,
   Variable,
@@ -33,8 +34,10 @@ const formatGroup = (group: VariablesGroup): string =>
     .map((str) => `  ${str}`)
     .join('\n')
 
-const formatVariable = ({ name, value }: Variable): string =>
-  `--${name}: ${value};`
+const formatVariable = ({ name, value, description }: Variable): string =>
+  [`--${name}: ${value};`, description ? `/* ${description} */` : null]
+    .filter(isNotNil)
+    .join(' ')
 
 const formatMediaQueries = (mediaQueries: MediaQueries): string => {
   return Object.entries(mediaQueries)

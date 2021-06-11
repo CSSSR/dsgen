@@ -5,11 +5,14 @@ module.exports = {
     dark: 'html.theme_dark',
   },
   textColors: {
-    primary: {
-      default: '#111',
-      dark: '#eee',
-    },
-    secondary: '#999',
+    primary: [
+      {
+        default: '#111',
+        dark: '#eee',
+      },
+      'Primary color',
+    ],
+    secondary: ['#999', 'Secondary color'],
     link: 'deepskyblue',
     'link-hover': 'blue',
     success: 'lime',

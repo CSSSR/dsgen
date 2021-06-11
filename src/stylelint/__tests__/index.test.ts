@@ -73,6 +73,21 @@ describe('getAutoFixFunc', () => {
     expect(result).toBe('var(--color-text-primary)')
   })
 
+  it('fixes color if it is present in config with description', () => {
+    const autoFixFunc = getAutoFixFunc({
+      textColors: {
+        primary: ['#111', 'Color description'],
+      },
+    })
+    const colorDecl = {
+      type: 'decl',
+      prop: 'color',
+      value: '#111',
+    } as Declaration
+    const result = autoFixFunc(colorDecl, {} as any, {} as any, {})
+    expect(result).toBe('var(--color-text-primary)')
+  })
+
   it('fixes color if it is present in config with first theme', () => {
     const autoFixFunc = getAutoFixFunc({
       textColors: {

@@ -20,12 +20,12 @@
       <option name="CSS_PROPERTY_VALUE" value="false" />
     </context>
   </template>
-  <template name="color-primary" value="color: var(--color-text-primary);" description="#111" toReformat="true" toShortenFQNames="true">
+  <template name="color-primary" value="color: var(--color-text-primary);" description="#111 - Primary color" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-secondary" value="color: var(--color-text-secondary);" description="#999" toReformat="true" toShortenFQNames="true">
+  <template name="color-secondary" value="color: var(--color-text-secondary);" description="#999 - Secondary color" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>

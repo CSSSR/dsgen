@@ -14,6 +14,7 @@ import {
   VariablesFormatter,
   VariablesGroup,
   VariablesMap,
+  ConfigVariable,
   VariableValue,
 } from './types'
 
@@ -53,13 +54,19 @@ const getThemeVariables = (
   themeIdx: number
 ): Variable[] =>
   Object.entries(variables)
-    .map<Variable | null>(([varName, varValue]) => {
+    .map<Variable | null>(([varName, configVariable]) => {
       const name = getVariableName(tokenGroup, varName)
+      const varValue = getVariableValue(configVariable)
+      // Add descriptions only inside first theme to not clutter CSS file with repeating comments
+      const description =
+        themeIdx === 0 ? getVariableDescription(configVariable) : undefined
 
       if (typeof varValue === 'string') {
-        return themeIdx === 0 ? { name, value: varValue } : null
+        return themeIdx === 0 ? { name, value: varValue, description } : null
       } else {
-        return varValue[themeName] ? { name, value: varValue[themeName] } : null
+        return varValue[themeName]
+          ? { name, value: varValue[themeName], description }
+          : null
       }
     })
     .filter(isNotNil)
@@ -85,7 +92,12 @@ export const getSnippetsList = (config: Config): Snippet[] => {
                     name: snippetText,
                     property,
                     variable: getVariableName(tokenGroup, varName),
-                    description: getDefaultVariableValue(varValue),
+                    description: [
+                      getDefaultVariableValue(varValue),
+                      getVariableDescription(varValue),
+                    ]
+                      .filter(Boolean)
+                      .join(' - '),
                   }
                 }
               )
@@ -120,7 +132,21 @@ export const snippetsFormatters: Record<SnippetsTarget, SnippetsFormatter> = {
 export const isNotNil = <T>(v: T): v is Exclude<T, null | undefined> =>
   v !== null && v !== undefined
 
-export const getDefaultVariableValue = (variableValue: VariableValue): string =>
-  typeof variableValue === 'string'
+export const getDefaultVariableValue = (
+  configVariable: ConfigVariable
+): string => {
+  const variableValue = getVariableValue(configVariable)
+  return typeof variableValue === 'string'
     ? variableValue
     : Object.values(variableValue)[0]
+}
+
+export const getVariableValue = (
+  configVariable: ConfigVariable
+): VariableValue =>
+  Array.isArray(configVariable) ? configVariable[0] : configVariable
+
+export const getVariableDescription = (
+  configVariable: ConfigVariable
+): string | undefined =>
+  Array.isArray(configVariable) ? configVariable[1] : undefined

@@ -28,9 +28,10 @@ export type Config = {
   [key in TokenGroup]?: VariablesMap
 }
 
-export type VariablesMap = Record<string, VariableValue>
+export type VariablesMap = Record<string, ConfigVariable>
 export type ThemeName = string
 export type VariableValue = string | Record<ThemeName, string>
+export type ConfigVariable = VariableValue | [VariableValue, string]
 
 export type VariablesGroup = {
   description?: string
@@ -45,6 +46,7 @@ export type Theme = {
 export type Variable = {
   name: string
   value: string
+  description?: string
 }
 
 export type MediaQueries = Record<string, string>

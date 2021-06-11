@@ -16,6 +16,7 @@ describe('variablesFormatters', () => {
             {
               name: 'color-text-primary',
               value: '#111',
+              description: 'Primary color',
             },
             {
               name: 'color-text-secondary',

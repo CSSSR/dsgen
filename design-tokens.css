@@ -6,8 +6,8 @@
 
 :root {
   /* Text colors */
-  --color-text-primary: #111;
-  --color-text-secondary: #999;
+  --color-text-primary: #111; /* Primary color */
+  --color-text-secondary: #999; /* Secondary color */
   --color-text-link: deepskyblue;
   --color-text-link-hover: blue;
   --color-text-success: lime;
