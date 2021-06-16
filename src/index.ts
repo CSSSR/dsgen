@@ -2,6 +2,7 @@
 
 import * as fs from 'fs'
 import * as path from 'path'
+import { formatStorybookMDX } from './formatters/storybook'
 import {
   getSnippetsList,
   getThemes,
@@ -17,6 +18,7 @@ const main = async () => {
   await writeVariables()
   await writeSnippets('JetBrains')
   await writeSnippets('VSCode')
+  await writeStorybookMDX()
 }
 
 const writeVariables = async () => {
@@ -38,6 +40,20 @@ const writeSnippets = async (target: SnippetsTarget) => {
   await fs.mkdir(fileDir, { recursive: true }, (err) => err && console.error)
   const fileName = `${fileDir}/${projectName}.${snippetFileExtensionByTarget[target]}`
   await fs.writeFile(fileName, snippetsText, (err) => err && console.error(err))
+}
+
+const writeStorybookMDX = async () => {
+  const mdxContent = formatStorybookMDX(config)
+  const { storybookMDX } = config.output || {}
+  if (storybookMDX) {
+    await fs.writeFile(
+      typeof storybookMDX === 'string'
+        ? storybookMDX
+        : './design-tokens.stories.mdx',
+      mdxContent,
+      (err) => err && console.error(err)
+    )
+  }
 }
 
 const snippetFileExtensionByTarget: Record<SnippetsTarget, string> = {

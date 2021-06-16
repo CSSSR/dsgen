@@ -17,6 +17,7 @@ export type Config = {
     snippets?: {
       [key in SnippetsTarget]?: string
     }
+    storybookMDX?: string | boolean
   }
   linting?: {
     severity?: 'warning' | 'error'

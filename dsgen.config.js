@@ -4,6 +4,9 @@ module.exports = {
     default: ':root',
     dark: 'html.theme_dark',
   },
+  output: {
+    storybookMDX: true,
+  },
   textColors: {
     primary: [
       {
