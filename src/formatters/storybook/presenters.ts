@@ -10,6 +10,7 @@ const colorPresenter: StorybookPresenter = (value) =>
   colorSquareWithText(value, {
     backgroundColor: value,
     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',
+    margin: '5px',
   })
 
 const shadowPresenter: StorybookPresenter = (value) =>
@@ -39,7 +40,6 @@ const colorSquareWithText = (value: string, style: CSS.Properties): string =>
           width: '50px',
           height: '50px',
           borderRadius: '10px',
-          fontSize: '14px',
           ...style,
         },
       }),
@@ -51,6 +51,7 @@ const colorSquareWithText = (value: string, style: CSS.Properties): string =>
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
+        fontSize: '14px',
       },
     }
   )
