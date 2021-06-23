@@ -84,8 +84,6 @@ const formatTable = (
 const upperFirst = (str: string): string =>
   `${str[0].toUpperCase()}${str.substr(1)}`
 
-// todo добавлять стили только если не process.env.NODE_ENV = test
-
 const formatVariable = (
   tokenGroup: TokenGroup,
   name: string,
