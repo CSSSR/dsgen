@@ -89,7 +89,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
     </tr>
     <tr>
       <td>--color-text-secondary</td>
-      <td colspan="2">#222</td>
+      <td colspan={2}>#222</td>
       <td></td>
     </tr>
   </tbody>

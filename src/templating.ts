@@ -19,10 +19,6 @@ const formatAttributes = (attrs: Attributes): string =>
   Object.entries(attrs)
     .filter(([attrName, attrValue]) => isNotNil(attrValue))
     .map(([attrName, attrValue]) => {
-      if (attrName === 'style') {
-        return `${attrName}={${JSON.stringify(attrValue)}}`
-      }
-
-      return `${attrName}="${attrValue}"`
+      return `${attrName}={${JSON.stringify(attrValue)}}`
     })
     .join(' ')
