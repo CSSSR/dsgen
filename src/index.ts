@@ -38,7 +38,9 @@ const writeSnippets = async (target: SnippetsTarget) => {
   const fileDir =
     config.output?.snippets?.[target] || defaultSnippetFolderByTarget[target]
   await fs.mkdir(fileDir, { recursive: true }, (err) => err && console.error)
-  const fileName = `${fileDir}/${projectName}.${snippetFileExtensionByTarget[target]}`
+  const fileName = `${fileDir}/${projectName.replace('/', '.')}.${
+    snippetFileExtensionByTarget[target]
+  }`
   await fs.writeFile(fileName, snippetsText, (err) => err && console.error(err))
 }
 
