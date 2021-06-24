@@ -23,6 +23,7 @@ const shadowPresenter: StorybookPresenter = (value) =>
   })
 
 export const STORYBOOK_PRESENTERS: Record<TokenGroup, StorybookPresenter> = {
+  colors: colorPresenter,
   textColors: colorPresenter,
   bgColors: colorPresenter,
   shadows: shadowPresenter,

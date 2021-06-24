@@ -8,6 +8,98 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 <br />
 
+## Common colors for texts and backgrounds
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable name</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>--color-success</td>
+      <td>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            fontSize: "14px",
+          }}
+        >
+          <div
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "10px",
+              backgroundColor: "lime",
+              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
+            }}
+          ></div>lime
+        </div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>--color-warning</td>
+      <td>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            fontSize: "14px",
+          }}
+        >
+          <div
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "10px",
+              backgroundColor: "yellow",
+              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
+            }}
+          ></div>yellow
+        </div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>--color-error</td>
+      <td>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            fontSize: "14px",
+          }}
+        >
+          <div
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "10px",
+              backgroundColor: "red",
+              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
+            }}
+          ></div>red
+        </div>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Text colors
 
 <table>
@@ -29,6 +121,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -36,9 +129,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#111",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>#111
         </div>
@@ -50,6 +143,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -57,9 +151,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#eee",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>#eee
         </div>
@@ -68,13 +162,14 @@ import { Meta } from "@storybook/addon-docs/blocks";
     </tr>
     <tr>
       <td>--color-text-secondary</td>
-      <td colspan="2">
+      <td colspan={2}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -82,9 +177,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#999",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>#999
         </div>
@@ -93,13 +188,14 @@ import { Meta } from "@storybook/addon-docs/blocks";
     </tr>
     <tr>
       <td>--color-text-link</td>
-      <td colspan="2">
+      <td colspan={2}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -107,9 +203,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "deepskyblue",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>deepskyblue
         </div>
@@ -118,13 +214,14 @@ import { Meta } from "@storybook/addon-docs/blocks";
     </tr>
     <tr>
       <td>--color-text-link-hover</td>
-      <td colspan="2">
+      <td colspan={2}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -132,86 +229,11 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "blue",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>blue
-        </div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>--color-text-success</td>
-      <td colspan="2">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "10px",
-              fontSize: "14px",
-              backgroundColor: "lime",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-            }}
-          ></div>lime
-        </div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>--color-text-warning</td>
-      <td colspan="2">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "10px",
-              fontSize: "14px",
-              backgroundColor: "yellow",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-            }}
-          ></div>yellow
-        </div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>--color-text-error</td>
-      <td colspan="2">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "10px",
-              fontSize: "14px",
-              backgroundColor: "red",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-            }}
-          ></div>red
         </div>
       </td>
       <td></td>
@@ -240,6 +262,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -247,9 +270,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#fff",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>#fff
         </div>
@@ -261,6 +284,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -268,9 +292,9 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#111",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>#111
         </div>
@@ -279,13 +303,14 @@ import { Meta } from "@storybook/addon-docs/blocks";
     </tr>
     <tr>
       <td>--color-bg-secondary</td>
-      <td colspan="2">
+      <td colspan={2}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -293,86 +318,11 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "50px",
               height: "50px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#eee",
               boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+              margin: "5px",
             }}
           ></div>#eee
-        </div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>--color-bg-success</td>
-      <td colspan="2">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "10px",
-              fontSize: "14px",
-              backgroundColor: "lime",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-            }}
-          ></div>lime
-        </div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>--color-bg-warning</td>
-      <td colspan="2">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "10px",
-              fontSize: "14px",
-              backgroundColor: "yellow",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-            }}
-          ></div>yellow
-        </div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>--color-bg-error</td>
-      <td colspan="2">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-        >
-          <div
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "10px",
-              fontSize: "14px",
-              backgroundColor: "red",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",
-            }}
-          ></div>red
         </div>
       </td>
       <td></td>
@@ -501,13 +451,14 @@ import { Meta } from "@storybook/addon-docs/blocks";
   <tbody>
     <tr>
       <td>--shadow-modal</td>
-      <td colspan="2">
+      <td colspan={2}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -515,7 +466,6 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "80px",
               height: "80px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#fff",
               boxShadow: "0px 5px 15px rgba(43, 51, 62, 0.5)",
               margin: "15px",
@@ -534,6 +484,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -541,7 +492,6 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "80px",
               height: "80px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#fff",
               boxShadow: "0px 4px 8px rgba(126, 143, 164, 0.15)",
               margin: "15px",
@@ -556,6 +506,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            fontSize: "14px",
           }}
         >
           <div
@@ -563,7 +514,6 @@ import { Meta } from "@storybook/addon-docs/blocks";
               width: "80px",
               height: "80px",
               borderRadius: "10px",
-              fontSize: "14px",
               backgroundColor: "#fff",
               boxShadow: "0px 5px 15px rgba(43, 51, 62, 0.2)",
               margin: "15px",

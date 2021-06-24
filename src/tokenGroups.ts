@@ -1,28 +1,41 @@
 import { PropertiesHyphen } from 'csstype'
 import { TokenGroup } from './types'
 
+type TokenGroupProperties = Record<string, keyof PropertiesHyphen>
+
+const textColorProperties: TokenGroupProperties = { color: 'color' }
+const bgColorProperties: TokenGroupProperties = {
+  bgc: 'background-color',
+  'border-color': 'border-color',
+  fill: 'fill',
+  stroke: 'stroke',
+}
+
 export const TOKEN_GROUPS_DETAILS: Record<
   TokenGroup,
   {
     variablePrefix: string
     description: string
-    properties: Record<string, keyof PropertiesHyphen>
+    properties: TokenGroupProperties
   }
 > = {
+  colors: {
+    variablePrefix: 'color',
+    description: 'Common colors for texts and backgrounds',
+    properties: {
+      ...textColorProperties,
+      ...bgColorProperties,
+    },
+  },
   textColors: {
     variablePrefix: 'color-text',
     description: 'Text colors',
-    properties: { color: 'color' },
+    properties: textColorProperties,
   },
   bgColors: {
     variablePrefix: 'color-bg',
     description: 'Background colors',
-    properties: {
-      bgc: 'background-color',
-      'border-color': 'border-color',
-      fill: 'fill',
-      stroke: 'stroke',
-    },
+    properties: bgColorProperties,
   },
   fontSizes: {
     variablePrefix: 'font-size',

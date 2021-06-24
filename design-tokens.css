@@ -5,21 +5,20 @@
 @custom-media --desktop (min-width: 1025px);
 
 :root {
+  /* Common colors for texts and backgrounds */
+  --color-success: lime;
+  --color-warning: yellow;
+  --color-error: red;
+
   /* Text colors */
   --color-text-primary: #111; /* Primary color */
   --color-text-secondary: #999; /* Secondary color */
   --color-text-link: deepskyblue;
   --color-text-link-hover: blue;
-  --color-text-success: lime;
-  --color-text-warning: yellow;
-  --color-text-error: red;
 
   /* Background colors */
   --color-bg-primary: #fff;
   --color-bg-secondary: #eee;
-  --color-bg-success: lime;
-  --color-bg-warning: yellow;
-  --color-bg-error: red;
 
   /* Font sizes */
   --font-size-xs: 8px;

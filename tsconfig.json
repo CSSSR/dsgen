@@ -6,7 +6,8 @@
       "dom"
     ],
     "strict": true,
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "downlevelIteration": true
   },
   "files": [
     "src/index.ts",

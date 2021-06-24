@@ -20,6 +20,106 @@
       <option name="CSS_PROPERTY_VALUE" value="false" />
     </context>
   </template>
+  <template name="color-success" value="color: var(--color-success);" description="lime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="color-warning" value="color: var(--color-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="color-error" value="color: var(--color-error);" description="red" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="color-var" value="color: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bgc-success" value="background-color: var(--color-success);" description="lime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bgc-warning" value="background-color: var(--color-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bgc-error" value="background-color: var(--color-error);" description="red" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="bgc-var" value="background-color: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-success" value="border-color: var(--color-success);" description="lime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-warning" value="border-color: var(--color-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-error" value="border-color: var(--color-error);" description="red" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="border-color-var" value="border-color: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="fill-success" value="fill: var(--color-success);" description="lime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="fill-warning" value="fill: var(--color-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="fill-error" value="fill: var(--color-error);" description="red" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="fill-var" value="fill: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="stroke-success" value="stroke: var(--color-success);" description="lime" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="stroke-warning" value="stroke: var(--color-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="stroke-error" value="stroke: var(--color-error);" description="red" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
+  <template name="stroke-var" value="stroke: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+    </context>
+  </template>
   <template name="color-primary" value="color: var(--color-text-primary);" description="#111 - Primary color" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
@@ -40,21 +140,6 @@
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="color-success" value="color: var(--color-text-success);" description="lime" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="color-warning" value="color: var(--color-text-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="color-error" value="color: var(--color-text-error);" description="red" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
   <template name="color-var" value="color: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
@@ -66,21 +151,6 @@
     </context>
   </template>
   <template name="bgc-secondary" value="background-color: var(--color-bg-secondary);" description="#eee" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="bgc-success" value="background-color: var(--color-bg-success);" description="lime" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="bgc-warning" value="background-color: var(--color-bg-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="bgc-error" value="background-color: var(--color-bg-error);" description="red" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
@@ -100,21 +170,6 @@
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="border-color-success" value="border-color: var(--color-bg-success);" description="lime" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="border-color-warning" value="border-color: var(--color-bg-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="border-color-error" value="border-color: var(--color-bg-error);" description="red" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
   <template name="border-color-var" value="border-color: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
@@ -130,21 +185,6 @@
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>
   </template>
-  <template name="fill-success" value="fill: var(--color-bg-success);" description="lime" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="fill-warning" value="fill: var(--color-bg-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="fill-error" value="fill: var(--color-bg-error);" description="red" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
   <template name="fill-var" value="fill: var(--$END$);" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
@@ -156,21 +196,6 @@
     </context>
   </template>
   <template name="stroke-secondary" value="stroke: var(--color-bg-secondary);" description="#eee" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="stroke-success" value="stroke: var(--color-bg-success);" description="lime" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="stroke-warning" value="stroke: var(--color-bg-warning);" description="yellow" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="CSS_DECLARATION_BLOCK" value="true" />
-    </context>
-  </template>
-  <template name="stroke-error" value="stroke: var(--color-bg-error);" description="red" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="CSS_DECLARATION_BLOCK" value="true" />
     </context>

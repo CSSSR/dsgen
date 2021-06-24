@@ -7,6 +7,11 @@ module.exports = {
   output: {
     storybookMDX: true,
   },
+  colors: {
+    success: 'lime',
+    warning: 'yellow',
+    error: 'red',
+  },
   textColors: {
     primary: [
       {
@@ -18,9 +23,6 @@ module.exports = {
     secondary: ['#999', 'Secondary color'],
     link: 'deepskyblue',
     'link-hover': 'blue',
-    success: 'lime',
-    warning: 'yellow',
-    error: 'red',
   },
   bgColors: {
     primary: {
@@ -28,9 +30,6 @@ module.exports = {
       dark: '#111',
     },
     secondary: '#eee',
-    success: 'lime',
-    warning: 'yellow',
-    error: 'red',
   },
   fontSizes: {
     xs: '8px',

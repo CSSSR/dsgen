@@ -1,6 +1,7 @@
 import { IgnoreValueList } from 'stylelint-declaration-strict-value/dist/defaults'
 
 export const TOKEN_GROUPS = [
+  'colors',
   'textColors',
   'bgColors',
   'fontSizes',

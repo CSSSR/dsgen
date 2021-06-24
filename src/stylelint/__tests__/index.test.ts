@@ -1,12 +1,34 @@
 import Declaration from 'postcss/lib/declaration'
-import { commonIgnoredValues, getAutoFixFunc, getStrictValueRule } from '../'
+import { commonIgnoredValues, getStrictValueRule } from '../'
 import { Config } from '../../types'
+import { getAutoFixFunc } from '../autofix'
 
 describe('getStrictValueRule', () => {
-  it('returns list of rules', () => {
+  it('returns list of rules for colors', () => {
     const config: Config = {
+      colors: {},
       textColors: {},
       bgColors: {},
+    }
+
+    const result = getStrictValueRule(config)
+    const expected: typeof result = [
+      ['color', 'background-color', 'border-color', 'fill', 'stroke'],
+      {
+        ignoreValues: {
+          '': commonIgnoredValues,
+        },
+        expandShorthand: true,
+        autoFixFunc: expect.any(Function),
+        severity: 'error',
+      },
+    ]
+
+    expect(result).toEqual(expected)
+  })
+
+  it('returns list of rules with allowed space values', () => {
+    const config: Config = {
       space: {},
       linting: {
         severity: 'warning',
@@ -17,11 +39,6 @@ describe('getStrictValueRule', () => {
     const result = getStrictValueRule(config)
     const expected: typeof result = [
       [
-        'color',
-        'background-color',
-        'border-color',
-        'fill',
-        'stroke',
         'padding',
         'padding-top',
         'padding-right',
@@ -139,11 +156,29 @@ describe('getAutoFixFunc', () => {
     expect(result).toBe('#111')
   })
 
-  it("doesn't fix color if it is present multiple times in config", () => {
+  it("doesn't fix color if it is present multiple times in the same token group", () => {
     const autoFixFunc = getAutoFixFunc({
       textColors: {
         duplicate1: '#fff',
         duplicate2: '#fff',
+      },
+    })
+    const colorDecl = {
+      type: 'decl',
+      prop: 'color',
+      value: '#fff',
+    } as Declaration
+    const result = autoFixFunc(colorDecl, {} as any, {} as any, {})
+    expect(result).toBe('#fff')
+  })
+
+  it("doesn't fix color if it is present multiple times in different token groups", () => {
+    const autoFixFunc = getAutoFixFunc({
+      colors: {
+        duplicate: '#fff',
+      },
+      textColors: {
+        duplicate: '#fff',
       },
     })
     const colorDecl = {

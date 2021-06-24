@@ -26,6 +26,121 @@
       "}"
     ]
   },
+  "color-success": {
+    "scope": "css,postcss",
+    "prefix": "color-success",
+    "body": "color: var(--color-success);",
+    "description": "lime"
+  },
+  "color-warning": {
+    "scope": "css,postcss",
+    "prefix": "color-warning",
+    "body": "color: var(--color-warning);",
+    "description": "yellow"
+  },
+  "color-error": {
+    "scope": "css,postcss",
+    "prefix": "color-error",
+    "body": "color: var(--color-error);",
+    "description": "red"
+  },
+  "color-var": {
+    "scope": "css,postcss",
+    "prefix": "color-var",
+    "body": "color: var(--$0);"
+  },
+  "bgc-success": {
+    "scope": "css,postcss",
+    "prefix": "bgc-success",
+    "body": "background-color: var(--color-success);",
+    "description": "lime"
+  },
+  "bgc-warning": {
+    "scope": "css,postcss",
+    "prefix": "bgc-warning",
+    "body": "background-color: var(--color-warning);",
+    "description": "yellow"
+  },
+  "bgc-error": {
+    "scope": "css,postcss",
+    "prefix": "bgc-error",
+    "body": "background-color: var(--color-error);",
+    "description": "red"
+  },
+  "bgc-var": {
+    "scope": "css,postcss",
+    "prefix": "bgc-var",
+    "body": "background-color: var(--$0);"
+  },
+  "border-color-success": {
+    "scope": "css,postcss",
+    "prefix": "border-color-success",
+    "body": "border-color: var(--color-success);",
+    "description": "lime"
+  },
+  "border-color-warning": {
+    "scope": "css,postcss",
+    "prefix": "border-color-warning",
+    "body": "border-color: var(--color-warning);",
+    "description": "yellow"
+  },
+  "border-color-error": {
+    "scope": "css,postcss",
+    "prefix": "border-color-error",
+    "body": "border-color: var(--color-error);",
+    "description": "red"
+  },
+  "border-color-var": {
+    "scope": "css,postcss",
+    "prefix": "border-color-var",
+    "body": "border-color: var(--$0);"
+  },
+  "fill-success": {
+    "scope": "css,postcss",
+    "prefix": "fill-success",
+    "body": "fill: var(--color-success);",
+    "description": "lime"
+  },
+  "fill-warning": {
+    "scope": "css,postcss",
+    "prefix": "fill-warning",
+    "body": "fill: var(--color-warning);",
+    "description": "yellow"
+  },
+  "fill-error": {
+    "scope": "css,postcss",
+    "prefix": "fill-error",
+    "body": "fill: var(--color-error);",
+    "description": "red"
+  },
+  "fill-var": {
+    "scope": "css,postcss",
+    "prefix": "fill-var",
+    "body": "fill: var(--$0);"
+  },
+  "stroke-success": {
+    "scope": "css,postcss",
+    "prefix": "stroke-success",
+    "body": "stroke: var(--color-success);",
+    "description": "lime"
+  },
+  "stroke-warning": {
+    "scope": "css,postcss",
+    "prefix": "stroke-warning",
+    "body": "stroke: var(--color-warning);",
+    "description": "yellow"
+  },
+  "stroke-error": {
+    "scope": "css,postcss",
+    "prefix": "stroke-error",
+    "body": "stroke: var(--color-error);",
+    "description": "red"
+  },
+  "stroke-var": {
+    "scope": "css,postcss",
+    "prefix": "stroke-var",
+    "body": "stroke: var(--$0);"
+  },
   "color-primary": {
     "scope": "css,postcss",
     "prefix": "color-primary",
@@ -50,29 +165,6 @@
     "body": "color: var(--color-text-link-hover);",
     "description": "blue"
   },
-  "color-success": {
-    "scope": "css,postcss",
-    "prefix": "color-success",
-    "body": "color: var(--color-text-success);",
-    "description": "lime"
-  },
-  "color-warning": {
-    "scope": "css,postcss",
-    "prefix": "color-warning",
-    "body": "color: var(--color-text-warning);",
-    "description": "yellow"
-  },
-  "color-error": {
-    "scope": "css,postcss",
-    "prefix": "color-error",
-    "body": "color: var(--color-text-error);",
-    "description": "red"
-  },
-  "color-var": {
-    "scope": "css,postcss",
-    "prefix": "color-var",
-    "body": "color: var(--$0);"
-  },
   "bgc-primary": {
     "scope": "css,postcss",
     "prefix": "bgc-primary",
@@ -84,29 +176,6 @@
     "prefix": "bgc-secondary",
     "body": "background-color: var(--color-bg-secondary);",
     "description": "#eee"
-  },
-  "bgc-success": {
-    "scope": "css,postcss",
-    "prefix": "bgc-success",
-    "body": "background-color: var(--color-bg-success);",
-    "description": "lime"
-  },
-  "bgc-warning": {
-    "scope": "css,postcss",
-    "prefix": "bgc-warning",
-    "body": "background-color: var(--color-bg-warning);",
-    "description": "yellow"
-  },
-  "bgc-error": {
-    "scope": "css,postcss",
-    "prefix": "bgc-error",
-    "body": "background-color: var(--color-bg-error);",
-    "description": "red"
-  },
-  "bgc-var": {
-    "scope": "css,postcss",
-    "prefix": "bgc-var",
-    "body": "background-color: var(--$0);"
   },
   "border-color-primary": {
     "scope": "css,postcss",
@@ -120,29 +189,6 @@
     "body": "border-color: var(--color-bg-secondary);",
     "description": "#eee"
   },
-  "border-color-success": {
-    "scope": "css,postcss",
-    "prefix": "border-color-success",
-    "body": "border-color: var(--color-bg-success);",
-    "description": "lime"
-  },
-  "border-color-warning": {
-    "scope": "css,postcss",
-    "prefix": "border-color-warning",
-    "body": "border-color: var(--color-bg-warning);",
-    "description": "yellow"
-  },
-  "border-color-error": {
-    "scope": "css,postcss",
-    "prefix": "border-color-error",
-    "body": "border-color: var(--color-bg-error);",
-    "description": "red"
-  },
-  "border-color-var": {
-    "scope": "css,postcss",
-    "prefix": "border-color-var",
-    "body": "border-color: var(--$0);"
-  },
   "fill-primary": {
     "scope": "css,postcss",
     "prefix": "fill-primary",
@@ -155,29 +201,6 @@
     "body": "fill: var(--color-bg-secondary);",
     "description": "#eee"
   },
-  "fill-success": {
-    "scope": "css,postcss",
-    "prefix": "fill-success",
-    "body": "fill: var(--color-bg-success);",
-    "description": "lime"
-  },
-  "fill-warning": {
-    "scope": "css,postcss",
-    "prefix": "fill-warning",
-    "body": "fill: var(--color-bg-warning);",
-    "description": "yellow"
-  },
-  "fill-error": {
-    "scope": "css,postcss",
-    "prefix": "fill-error",
-    "body": "fill: var(--color-bg-error);",
-    "description": "red"
-  },
-  "fill-var": {
-    "scope": "css,postcss",
-    "prefix": "fill-var",
-    "body": "fill: var(--$0);"
-  },
   "stroke-primary": {
     "scope": "css,postcss",
     "prefix": "stroke-primary",
@@ -189,29 +212,6 @@
     "prefix": "stroke-secondary",
     "body": "stroke: var(--color-bg-secondary);",
     "description": "#eee"
-  },
-  "stroke-success": {
-    "scope": "css,postcss",
-    "prefix": "stroke-success",
-    "body": "stroke: var(--color-bg-success);",
-    "description": "lime"
-  },
-  "stroke-warning": {
-    "scope": "css,postcss",
-    "prefix": "stroke-warning",
-    "body": "stroke: var(--color-bg-warning);",
-    "description": "yellow"
-  },
-  "stroke-error": {
-    "scope": "css,postcss",
-    "prefix": "stroke-error",
-    "body": "stroke: var(--color-bg-error);",
-    "description": "red"
-  },
-  "stroke-var": {
-    "scope": "css,postcss",
-    "prefix": "stroke-var",
-    "body": "stroke: var(--$0);"
   },
   "fz-xs": {
     "scope": "css,postcss",
